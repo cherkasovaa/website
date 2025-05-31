@@ -9,7 +9,7 @@ const aliases = {
 export default defineConfig(() => {
   return {
     plugins: [react()],
-    base: '',
+    base: '/',
     build: {
       outDir: './build',
       emptyOutDir: true,
