@@ -2,18 +2,14 @@ import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
 
-const BASE_URL_DEV = '';
-const BASE_URL_PROD = '/website/';
 const aliases = {
   '~': resolve(__dirname, './src'),
 };
 
-export default defineConfig(({ command }) => {
-  const isBuild = command === 'build';
-
+export default defineConfig(() => {
   return {
     plugins: [react()],
-    base: isBuild ? BASE_URL_PROD : BASE_URL_DEV,
+    base: '',
     build: {
       outDir: './build',
       emptyOutDir: true,
