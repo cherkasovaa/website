@@ -1,9 +1,7 @@
 import type { FC } from 'react';
 
-import HomePage from '~/pages/Home/Home';
+import { AppRouter } from './routes/AppRouter';
 
-const App: FC = () => {
-  return <HomePage />;
-};
+const App: FC = () => <AppRouter />;
 
 export default App;
