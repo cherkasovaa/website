@@ -1,14 +1,12 @@
 import { type JSX } from 'react';
 
-import { Outlet } from 'react-router-dom';
+import { Main } from '~/widgets';
 
 export const Layout = (): JSX.Element => {
   return (
     <>
       <div>Header</div>
-      <main>
-        <Outlet />
-      </main>
+      <Main />
       <div>Footer</div>
     </>
   );
