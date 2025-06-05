@@ -28,6 +28,7 @@ export default defineConfig(() => {
       },
       alias: aliases,
     },
+    assetsInclude: ['./src/**/*.lottie'],
     server: {
       port: 3000,
       open: true,
