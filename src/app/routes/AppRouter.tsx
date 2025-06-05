@@ -2,6 +2,7 @@ import type { JSX } from 'react';
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
+import { NotFoundPage } from '~/pages/not-found';
 import { APP_PATHS } from '~/shared/config/router/paths';
 
 import { Layout } from '../layout/Layout';
@@ -12,7 +13,7 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       { index: true, element: <div>Home</div> },
-      { path: APP_PATHS.NOT_FOUND, element: <div>404 Page Not Found</div> },
+      { path: APP_PATHS.NOT_FOUND, element: <NotFoundPage /> },
     ],
   },
 ]);
