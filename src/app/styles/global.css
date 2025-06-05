@@ -1,1 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('tailwindcss');
+
+@theme {
+  --font-primary: 'Poiret One', sans-serif;
+  --font-secondary: 'Roboto', sans-serif;
+  --color-primary: #1a2e35;
+  --color-secondary: #6b7280;
+  --color-accent: #8f1e9e;
+  --color-background: #f8fafc;
+}
+
+@layer base {
+  .dark {
+    --color-primary: #e2ebff;
+    --color-secondary: #a4b5d8;
+    --color-accent: #3ef6f3;
+    --color-background: #0d1830;
+  }
+
+  body {
+    @apply font-primary text-primary bg-background;
+  }
+
+  a {
+    @apply text-secondary hover:text-accent font-secondary transition duration-200;
+  }
+}
