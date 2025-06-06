@@ -26,3 +26,9 @@
     @apply text-secondary hover:text-accent font-secondary transition duration-200;
   }
 }
+
+@layer utilities {
+  .burger-toggle {
+    @apply [&>div]:bg-background [&>div]:h-0 [&>div]:before:translate-y-0 [&>div]:before:rotate-45 [&>div]:after:translate-y-0 [&>div]:after:-rotate-45;
+  }
+}
