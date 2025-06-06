@@ -1,6 +1,7 @@
 import { type JSX } from 'react';
 
-import { Header, Main } from '~/widgets';
+import { Header } from '~/widgets/header';
+import { Main } from '~/widgets/main';
 
 export const Layout = (): JSX.Element => {
   return (
