@@ -4,4 +4,8 @@ import { Link } from 'react-router-dom';
 
 import type { LinkProps } from '~/shared/model/interfaces';
 
-export const RouterLink = ({ path, content }: LinkProps): JSX.Element => <Link to={path}>{content}</Link>;
+export const RouterLink = ({ path, content, handleClick }: LinkProps): JSX.Element => (
+  <Link to={path} onClick={handleClick}>
+    {content}
+  </Link>
+);
