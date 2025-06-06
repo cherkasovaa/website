@@ -1,11 +1,11 @@
 import { type JSX } from 'react';
 
-import { Main } from '~/widgets';
+import { Header, Main } from '~/widgets';
 
 export const Layout = (): JSX.Element => {
   return (
     <>
-      <div>Header</div>
+      <Header />
       <Main />
       <div>Footer</div>
     </>
