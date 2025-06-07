@@ -23,7 +23,9 @@ export const Footer = (): JSX.Element => {
               <FaGithub className="hover:text-accent h-6 w-6 transition-colors" />
             </a>
 
-            <p className="text-center text-sm">Designed & Built with ❤️ using React, TypeScript & Tailwind</p>
+            <p className="text-center text-sm font-semibold">
+              Designed & Built with ❤️ using React, TypeScript & Tailwind
+            </p>
           </div>
 
           <div className="flex flex-col items-center gap-4 md:items-end">
