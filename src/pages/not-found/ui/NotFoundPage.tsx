@@ -8,7 +8,7 @@ import { BUTTON_HOME_BACK, PAGE_TITLE } from '../constants/constants';
 export const NotFoundPage = (): JSX.Element => {
   return (
     <section className="flex h-full w-full items-center justify-center">
-      <div className="grid w-full grid-cols-1 grid-rows-2 gap-8 lg:grid-cols-2 lg:grid-rows-1">
+      <div className="grid w-full grid-cols-1 grid-rows-[minmax(1fr,max-content)] gap-8 py-6 lg:grid-cols-2 lg:grid-rows-1">
         <div className="flex justify-center self-end lg:justify-end lg:self-center">
           <ErrorAnimation />
         </div>
