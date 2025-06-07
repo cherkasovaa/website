@@ -11,7 +11,7 @@ export const NavigationMenu = ({ handleClick }: NavigationMenuProps): JSX.Elemen
     <nav aria-label="navigation" className="flex h-full items-center justify-center">
       <ul className="flex flex-col gap-4 md:flex-row md:gap-10">
         {menuItems.map((link) => (
-          <li key={link} className="text-center sm:text-3xl lg:text-base">
+          <li key={link} className="text-center text-3xl md:text-base">
             <RouterLink path={`#${link.toLowerCase()}`} content={link} handleClick={handleClick} />
           </li>
         ))}
