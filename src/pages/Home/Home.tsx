@@ -1,14 +1,9 @@
-import { Button } from '~/shared/ui';
+import type { JSX } from 'react';
 
-const HomePage = () => {
-  const handleClick = (data: unknown): void => {
-    console.log(data);
-  };
-
+const HomePage = (): JSX.Element => {
   return (
     <div className="p-4">
-      <h1 className="text-3xl font-bold mb-4">Home Page</h1>
-      <Button onClick={() => handleClick('clicked')}>Click me</Button>
+      <h1 className="mb-4 text-3xl font-bold">Home Page</h1>
     </div>
   );
 };
