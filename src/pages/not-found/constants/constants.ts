@@ -1,2 +1,2 @@
-export const PAGE_TITLE = 'Страница не найдена';
-export const BUTTON_HOME_BACK = 'Вернуться на главный экран';
+export const PAGE_TITLE = 'Page not found';
+export const BUTTON_HOME_BACK = 'Back to home screen';
