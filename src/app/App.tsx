@@ -1,9 +1,12 @@
 import type { FC } from 'react';
 
-import HomePage from '~/pages/Home/Home';
+import { ThemeProvider } from './providers/ThemeProvider';
+import { AppRouter } from './routes/AppRouter';
 
-const App: FC = () => {
-  return <HomePage />;
-};
+const App: FC = () => (
+  <ThemeProvider>
+    <AppRouter />
+  </ThemeProvider>
+);
 
 export default App;

@@ -3,12 +3,12 @@ declare module '*.css' {
   export default content;
 }
 
-// declare module 'eslint-plugin-fsd-architecture-checker' {
-//   const plugin: any;
-//   export default plugin;
-// }
+declare module '*.lottie' {
+  const content: string;
+  export default content;
+}
 
-// declare module 'eslint-plugin-import' {
-//   const plugin: any;
-//   export default plugin;
-// }
+declare module '*.png' {
+  const content: string;
+  export default content;
+}

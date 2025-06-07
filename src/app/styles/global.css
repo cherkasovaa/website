@@ -1,1 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('tailwindcss');
+
+@theme {
+  --font-primary: 'Poiret One', sans-serif;
+  --font-secondary: 'Roboto', sans-serif;
+  --color-primary: #1a2e35;
+  --color-secondary: #6b7280;
+  --color-accent: #ae8bf8;
+  --color-background: #f8fafc;
+}
+
+@layer base {
+  .dark {
+    --color-primary: #e2ebff;
+    --color-secondary: #a4b5d8;
+    --color-accent: #3ef6f3;
+    --color-background: #0d1830;
+  }
+
+  html,
+  body {
+    @apply h-full;
+  }
+
+  body {
+    @apply font-secondary text-primary bg-background;
+  }
+
+  a {
+    @apply text-secondary hover:text-accent font-secondary transition duration-200;
+  }
+}
+
+@layer utilities {
+  #root {
+    @apply flex h-full flex-col;
+  }
+
+  .burger-toggle {
+    @apply [&>div]:bg-background [&>div]:h-0 [&>div]:before:translate-y-0 [&>div]:before:rotate-45 [&>div]:after:translate-y-0 [&>div]:after:-rotate-45;
+  }
+}
