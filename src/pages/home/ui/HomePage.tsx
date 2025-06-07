@@ -1,9 +1,17 @@
 import type { JSX } from 'react';
 
+import { HeroGreeting } from '~/features/hero-greeting';
+import { Terminal } from '~/features/terminal';
+
 export const HomePage = (): JSX.Element => {
+  console.log('HomePage');
   return (
-    <div className="p-4">
-      <h1 className="mb-4 text-3xl font-bold">Home Page</h1>
-    </div>
+    <section className="flex h-full w-full items-center justify-center py-10">
+      <div className="grid w-full grid-cols-1 grid-rows-[minmax(max-content,1fr)] items-center gap-8 py-6 lg:grid-cols-2 lg:grid-rows-1">
+        <HeroGreeting />
+
+        <Terminal />
+      </div>
+    </section>
   );
 };
