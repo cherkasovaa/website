@@ -49,7 +49,7 @@ export const Terminal = (): JSX.Element => {
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
-      className="h-72 w-full max-w-md justify-self-center overflow-hidden rounded-lg border border-gray-700 bg-gray-900 font-mono text-sm text-green-400 shadow-2xl shadow-neutral-900 md:justify-self-start md:text-base"
+      className="m-auto h-72 w-full max-w-md justify-self-center overflow-hidden rounded-lg border border-gray-700 bg-gray-900 font-mono text-sm text-green-400 shadow-2xl shadow-neutral-900 md:justify-self-start md:text-base"
     >
       <div className="mb-4 flex items-center space-x-2 bg-gray-800 px-6 py-2">
         <div className="h-3 w-3 rounded-full bg-red-500"></div>
