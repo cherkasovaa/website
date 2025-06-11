@@ -10,8 +10,8 @@ export const SkillList = ({ title, skills }: SkillListProps): JSX.Element => {
       <Heading level={3}>{title}</Heading>
 
       <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-1 lg:gap-4">
-        {skills.map((group) => (
-          <SkillCard key={skills.join('~')} group={group} />
+        {skills.map((group, idx) => (
+          <SkillCard key={group.join('~')} group={group} index={idx} />
         ))}
       </ul>
     </div>
