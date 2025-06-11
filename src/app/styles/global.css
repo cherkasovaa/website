@@ -18,13 +18,12 @@
     --color-background: #0d1830;
   }
 
-  html,
   body {
-    @apply h-full;
+    @apply font-secondary text-primary bg-background h-full min-h-screen overflow-x-hidden scroll-smooth;
   }
 
-  body {
-    @apply font-secondary text-primary bg-background;
+  section {
+    @apply flex flex-1 py-10 md:py-20;
   }
 
   a {
@@ -34,7 +33,7 @@
 
 @layer utilities {
   #root {
-    @apply flex h-full flex-col;
+    @apply flex h-full min-h-[inherit] flex-col;
   }
 
   .burger-toggle {
