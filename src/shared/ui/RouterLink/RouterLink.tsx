@@ -5,13 +5,15 @@ import { Link } from 'react-router-dom';
 import { scrollToSection } from '~/shared/lib/utils/scrollToSection';
 import type { LinkProps } from '~/shared/model/interfaces';
 
-export const RouterLink = ({ path, content, handleClick }: LinkProps): JSX.Element => {
-  const to = `#${path}`;
+export const RouterLink = ({ path, content, handleClick, isAnchor = false }: LinkProps): JSX.Element => {
+  const to = isAnchor ? `#${path}` : path;
 
   const handleLinkClick = (e: React.MouseEvent): void => {
-    e.preventDefault();
+    if (isAnchor) {
+      e.preventDefault();
 
-    scrollToSection(path);
+      scrollToSection(path);
+    }
 
     if (handleClick) handleClick();
   };

@@ -12,7 +12,7 @@ export const NavigationMenu = ({ handleClick }: NavigationMenuProps): JSX.Elemen
       <ul className="flex flex-col gap-4 md:flex-row md:gap-10">
         {menuItems.map((link) => (
           <li key={link} className="text-center text-3xl md:text-base">
-            <RouterLink path={link.toLowerCase()} content={link} handleClick={handleClick} />
+            <RouterLink path={link.toLowerCase()} content={link} isAnchor={true} handleClick={handleClick} />
           </li>
         ))}
       </ul>
