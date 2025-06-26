@@ -2,9 +2,9 @@ import type { JSX } from 'react';
 
 import { RouterLink } from '~/shared/ui';
 
-import { menuItems } from './model/constants';
+import { menuItems } from '../model/constants';
 
-import type { NavigationMenuProps } from './model/types';
+import type { NavigationMenuProps } from '../model/types';
 
 export const NavigationMenu = ({ handleClick }: NavigationMenuProps): JSX.Element => {
   return (

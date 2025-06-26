@@ -1,6 +1,6 @@
 import { type JSX, useEffect, useState } from 'react';
 
-import { NavigationMenu } from '~/features';
+import { NavigationMenu } from '~/features/navigation-menu';
 import { BurgerMenu, Logo } from '~/shared/ui';
 
 export const Header = (): JSX.Element => {
