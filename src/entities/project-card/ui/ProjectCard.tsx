@@ -2,7 +2,7 @@ import { type JSX } from 'react';
 
 import { Github, SquareArrowOutUpRight } from 'lucide-react';
 
-import { Heading, Image } from '~/shared/ui';
+import { Heading, Image, TechStack } from '~/shared/ui';
 
 import { IMAGE_BASE_URL, PLACEHOLDER_URL } from '../model/constants';
 
@@ -12,7 +12,7 @@ export const ProjectCard = ({ project }: ProjectCardProps): JSX.Element => {
   const imageUrl = project.imageUrl ? `${IMAGE_BASE_URL}${project.imageUrl}` : PLACEHOLDER_URL;
 
   return (
-    <div className="portfolio-card shadow-medium transition-transform-background inset-shadow-accent/10 text-primary hover:bg-accent/5 cursor-pointer overflow-hidden rounded-lg inset-shadow-sm duration-100">
+    <div className="portfolio-card shadow-medium transition-transform-background text-primary hover:bg-accent/5 cursor-pointer overflow-hidden rounded-lg duration-100">
       <div className="p-6">
         <div className="flex flex-col items-stretch gap-3 md:flex-row">
           <div className="mb-6 flex flex-col md:mr-6 md:mb-0 md:w-1/2">
@@ -32,12 +32,8 @@ export const ProjectCard = ({ project }: ProjectCardProps): JSX.Element => {
             </a>
             <p className="mb-6">{project.description}</p>
 
-            <div className="mb-4 flex flex-wrap items-center gap-2">
-              {project.technologies.map((tech) => (
-                <span key={`${project.id}_${tech}`} className="bg-accent/10 rounded-full px-3 py-1 text-sm">
-                  {tech}
-                </span>
-              ))}
+            <div className="text-accent mb-4 flex flex-wrap items-center gap-2">
+              <TechStack technologies={project.technologies} />
             </div>
 
             {project.githubUrl && (
