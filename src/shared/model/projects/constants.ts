@@ -56,7 +56,7 @@ export const projects: Project[] = [
     date: '01-04-2025',
     technologies: [TECHNOLOGIES.TS, TECHNOLOGIES.CSS_MODULES, TECHNOLOGIES.WEBPACK, TECHNOLOGIES.FETCH_API],
     githubUrl: 'https://github.com/cherkasovaa/async-race-app',
-    liveUrl: 'https://github.com/cherkasovaa/async-race-app/',
+    liveUrl: 'https://cherkasovaa.github.io/async-race-app/',
     imageUrl: '',
   },
   {
