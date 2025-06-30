@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import { HomePage } from '~/pages/home';
 import { NotFoundPage } from '~/pages/not-found';
+import { PortfolioPage } from '~/pages/portfolio';
 import { APP_PATHS } from '~/shared/config/router/paths';
 
 import { Layout } from '../layout/Layout';
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <HomePage /> },
       { path: APP_PATHS.NOT_FOUND, element: <NotFoundPage /> },
+      { path: APP_PATHS.PORTFOLIO, element: <PortfolioPage /> },
     ],
   },
 ]);
