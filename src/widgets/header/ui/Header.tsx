@@ -1,7 +1,8 @@
 import { type JSX, useEffect, useState } from 'react';
 
 import { NavigationMenu } from '~/features/navigation-menu';
-import { BurgerMenu, Logo } from '~/shared/ui';
+import { APP_PATHS } from '~/shared/config/router/paths';
+import { BurgerMenu, Logo, RouterLink } from '~/shared/ui';
 
 export const Header = (): JSX.Element => {
   const [isMobile, setIsMobile] = useState<boolean>(false);
@@ -31,6 +32,7 @@ export const Header = (): JSX.Element => {
   }, [isMenuOpen]);
 
   const toggleMenu = (): void => setIsMenuOpen((prev) => !prev);
+  const handleResumeView = (): Window | null => window.open(APP_PATHS.RESUME, '_blank');
 
   return (
     <header className="header p-4">
@@ -40,6 +42,14 @@ export const Header = (): JSX.Element => {
         <div className="hidden md:flex">
           <NavigationMenu />
         </div>
+
+        <RouterLink
+          path={APP_PATHS.RESUME}
+          content="Resume"
+          handleClick={handleResumeView}
+          className="border-accent hover:text-background bg-accent/10 hover:bg-accent text-accent inline-block rounded-full px-5 py-1 text-center text-lg transition-colors"
+          aria-label="resume (opens in a new tab)"
+        />
 
         <div className="border-accent z-20 flex h-12 w-12 items-center justify-center rounded-sm border-1 md:hidden">
           <BurgerMenu handleClick={toggleMenu} active={isMenuOpen} />

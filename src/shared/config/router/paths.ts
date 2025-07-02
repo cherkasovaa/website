@@ -4,5 +4,6 @@ export const APP_PATHS = {
   EXPERIENCE: 'experience',
   SKILLS: 'skills',
   PORTFOLIO: 'portfolio',
+  RESUME: 'resume_2025.pdf',
   NOT_FOUND: '*',
 } as const;
