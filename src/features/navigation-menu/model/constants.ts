@@ -1,5 +1,6 @@
 export const MenuLinks = {
   ABOUT: 'About',
+  EXPERIENCE: 'Experience',
   SKILLS: 'Skills',
   PORTFOLIO: 'Portfolio',
 } as const;
