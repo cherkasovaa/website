@@ -19,11 +19,7 @@
   }
 
   body {
-    @apply font-primary text-primary bg-background h-full min-h-screen overflow-x-hidden scroll-smooth;
-  }
-
-  section {
-    @apply flex flex-1 py-10 md:py-20;
+    @apply font-primary text-primary bg-background h-full min-h-screen cursor-default overflow-x-hidden scroll-smooth;
   }
 
   a {
