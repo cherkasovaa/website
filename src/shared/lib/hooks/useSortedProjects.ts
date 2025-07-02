@@ -1,12 +1,17 @@
 import { useMemo } from 'react';
 
-import { projects } from '~/shared/model/projects/constants';
-import type { Project } from '~/shared/model/projects/types';
-
-export const useSortedProjects = (): Project[] => {
+export const useSortedProjects = <T>(items: T[], dateAccessor: (item: T) => string | Date | null): T[] => {
   const sortedProjects = useMemo(() => {
-    return [...projects].sort((prev, curr) => new Date(curr.date).getTime() - new Date(prev.date).getTime());
-  }, []);
+    return [...items].sort((prev, current) => {
+      const prevDateValue = dateAccessor(prev);
+      const currDateValue = dateAccessor(current);
+
+      const prevDate = prevDateValue ? new Date(prevDateValue) : new Date();
+      const currDate = currDateValue ? new Date(currDateValue) : new Date();
+
+      return currDate.getTime() - prevDate.getTime();
+    });
+  }, [items, dateAccessor]);
 
   return sortedProjects;
 };

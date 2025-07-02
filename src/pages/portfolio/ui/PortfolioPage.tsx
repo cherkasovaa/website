@@ -2,12 +2,14 @@ import { type JSX } from 'react';
 
 import { ProjectTable } from '~/features/project-table';
 import { useSortedProjects } from '~/shared/lib/hooks/useSortedProjects';
+import { projects } from '~/shared/model/projects/constants';
+import type { Project } from '~/shared/model/projects/types';
 import { Heading } from '~/shared/ui';
 
 import { PAGE_TITLE } from '../constants/constants';
 
 export const PortfolioPage = (): JSX.Element => {
-  const sortedProjects = useSortedProjects();
+  const sortedProjects = useSortedProjects(projects, (item: Project) => item.date);
 
   return (
     <div>
