@@ -1,0 +1,26 @@
+export const TECHNOLOGIES = {
+  HTML: 'HTML5',
+  CSS: 'CSS3',
+  SCSS: 'SCSS',
+  JS: 'JavaScript',
+  TS: 'TypeScript',
+  ACTION_SCRIPT: 'Action Script 3',
+  PHP: 'PHP',
+  REACT: 'React',
+  REACT_ROUTER: 'React Router',
+  TANSTACK: 'Tanstack',
+  TAILWIND: 'Tailwind CSS',
+  MATERIAL_UI: 'Material UI',
+  BEM: 'BEM',
+  WEBPACK: 'Webpack',
+  VITE: 'Vite',
+  CSS_MODULES: 'CSS Modules',
+  FETCH_API: 'Fetch API',
+  CANVAS_API: 'Canvas API',
+  FILE_API: 'File API',
+  NETLIFY: 'Netlify',
+  WORDPRESS: 'Wordpress',
+  SEO: 'SEO',
+} as const;
+
+export type Technology = (typeof TECHNOLOGIES)[keyof typeof TECHNOLOGIES];
