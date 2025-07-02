@@ -10,7 +10,7 @@ import { Heading } from '../../../shared/ui/Heading/Heading';
 export const HeroGreeting = (): JSX.Element => {
   return (
     <div className="flex flex-col items-center md:items-start">
-      <motion.div {...useFadeInUpAnimation()} className="font-primary mb-4 text-5xl font-bold md:text-7xl">
+      <motion.div {...useFadeInUpAnimation()} className="mb-4 text-5xl font-bold md:text-7xl">
         <motion.span
           animate={{ rotate: [0, 20, 0] }}
           transition={{ repeat: 2, delay: 1, duration: 0.5 }}
@@ -21,7 +21,7 @@ export const HeroGreeting = (): JSX.Element => {
         <span className="text-accent mr-2">Hi,</span>I&apos;m Alina.
       </motion.div>
 
-      <motion.div {...useFadeInUpAnimation(0.2)} className="font-primary mb-8 [&>*]:text-3xl [&>*]:md:text-5xl">
+      <motion.div {...useFadeInUpAnimation(0.2)} className="mb-8 [&>*]:text-3xl [&>*]:md:text-5xl">
         <Heading level={1}>
           I craft modern <span className="text-accent">web apps</span>
         </Heading>

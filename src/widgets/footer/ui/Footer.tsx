@@ -4,7 +4,7 @@ import { FaGithub, FaTelegram } from 'react-icons/fa';
 
 export const Footer = (): JSX.Element => {
   return (
-    <footer className="bg-background text-secondary font-primary border-t border-gray-200 py-4 dark:border-gray-800">
+    <footer className="bg-background text-secondary border-t border-gray-200 py-4 dark:border-gray-800">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           <div className="flex flex-col items-center gap-4 md:items-start">
@@ -29,7 +29,7 @@ export const Footer = (): JSX.Element => {
           </div>
 
           <div className="flex flex-col items-center gap-4 md:items-end">
-            <a href="mailto:alina.ch1202@yandex.com" className="hover:text-accent font-primary transition-colors">
+            <a href="mailto:alina.ch1202@yandex.com" className="hover:text-accent transition-colors">
               alina.ch1202@yandex.com
             </a>
             <p className="text-sm">© Alina Cherkasova, 2025</p>

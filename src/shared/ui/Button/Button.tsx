@@ -8,7 +8,7 @@ export const Button = ({ content, handleClick }: ButtonProps): JSX.Element => {
   return (
     <button
       type="button"
-      className="font-primary text-accent group hover:bg-accent/10 relative cursor-pointer px-6 py-2 font-semibold tracking-widest transition-all duration-300"
+      className="text-accent group hover:bg-accent/10 relative cursor-pointer px-6 py-2 font-semibold tracking-widest transition-all duration-300"
       onClick={handleClick}
     >
       <ButtonBracket side="left" />
