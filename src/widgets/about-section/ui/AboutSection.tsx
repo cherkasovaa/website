@@ -1,7 +1,7 @@
 import { type JSX, useMemo } from 'react';
 
 import { APP_PATHS } from '~/shared/config/router/paths';
-import { Heading } from '~/shared/ui';
+import { Heading, Section } from '~/shared/ui';
 
 import myPhoto from '../assets/my-photo.jpg';
 import { ABOUT_TEXT, SECTION_TITLE } from '../model/constants';
@@ -10,7 +10,7 @@ export const AboutSection = (): JSX.Element => {
   const textChunks = useMemo(() => ABOUT_TEXT.split('\n').filter(Boolean), []);
 
   return (
-    <section id={APP_PATHS.ABOUT} className="flex flex-col">
+    <Section id={APP_PATHS.ABOUT}>
       <Heading level={2}>{SECTION_TITLE}</Heading>
 
       <div className="flex flex-col gap-10 lg:flex-row">
@@ -26,6 +26,6 @@ export const AboutSection = (): JSX.Element => {
           ))}
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
