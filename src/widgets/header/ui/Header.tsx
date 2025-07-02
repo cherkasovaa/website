@@ -47,7 +47,7 @@ export const Header = (): JSX.Element => {
           path={APP_PATHS.RESUME}
           content="Resume"
           handleClick={handleResumeView}
-          className="border-accent hover:text-background bg-accent/10 hover:bg-accent text-accent inline-block rounded-full px-5 py-1 text-center text-lg transition-colors"
+          className="border-accent hover:text-background bg-accent/10 hover:bg-accent text-accent text-md inline-block rounded-full px-5 py-1 text-center transition-colors"
           aria-label="resume (opens in a new tab)"
         />
 
