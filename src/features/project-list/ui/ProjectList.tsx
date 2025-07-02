@@ -1,16 +1,13 @@
-import { type JSX, useMemo } from 'react';
+import { type JSX } from 'react';
 
 import { ProjectCard } from '~/entities/project-card';
+import { useLimitedList } from '~/shared/lib/hooks/useLimitedList';
 import { useSortedProjects } from '~/shared/lib/hooks/useSortedProjects';
 import type { ListProps } from '~/shared/model/list.types';
-import { projects } from '~/shared/model/projects/constants';
 
 export const ProjectList = ({ limit = 3, showAll = false }: ListProps): JSX.Element => {
   const sortedProjects = useSortedProjects();
-  const latestProjects = useMemo(
-    () => sortedProjects.slice(0, showAll ? projects.length : limit),
-    [limit, showAll, sortedProjects],
-  );
+  const latestProjects = useLimitedList(sortedProjects, { limit, showAll });
 
   return (
     <ul className="portfolio-list">
