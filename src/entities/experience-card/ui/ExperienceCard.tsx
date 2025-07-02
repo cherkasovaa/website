@@ -14,7 +14,7 @@ export const ExperienceCard = ({ experience }: ExperienceCardProps): JSX.Element
   return (
     <div className="grid grid-cols-1 sm:grid-cols-8">
       <div
-        className="text-secondary mt-1 mb-2 text-sm font-semibold tracking-wide uppercase sm:col-span-2"
+        className="text-secondary font-secondary mt-1 mb-2 text-sm font-semibold uppercase sm:col-span-2"
         aria-label={`${startPeriod} to ${endPeriod}`}
       >
         {startPeriod} - {endPeriod}
@@ -52,7 +52,7 @@ export const ExperienceCard = ({ experience }: ExperienceCardProps): JSX.Element
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1"
+                className="font-secondary flex items-center gap-1 text-sm tracking-tight"
                 aria-label={`${project.name} (opens in a new tab)`}
               >
                 <Link size={10} strokeWidth={0.75} />
