@@ -14,7 +14,12 @@ export const PortfolioSection = (): JSX.Element => {
       <div className="portfolio">
         <ProjectList />
 
-        <RouterLink path={APP_PATHS.PORTFOLIO} content="View Full Project Archive" />
+        <RouterLink
+          path={APP_PATHS.PORTFOLIO}
+          content="View Full Project Archive"
+          className="border-accent hover:text-background bg-accent/10 hover:bg-accent text-accent inline-block rounded-full px-6 py-1.5 text-center text-sm transition-colors"
+          aria-label="archive projects page (opens in a new tab)"
+        />
       </div>
     </Section>
   );
