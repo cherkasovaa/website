@@ -8,7 +8,7 @@ export const ExperienceSection = (): JSX.Element => {
   const SECTION_TITLE = 'Experience';
 
   return (
-    <section id={APP_PATHS.EXPERIENCE} className="flex flex-col gap-3">
+    <section id={APP_PATHS.EXPERIENCE} className="flex flex-col">
       <Heading level={2}>{SECTION_TITLE}</Heading>
 
       <ExperienceList />

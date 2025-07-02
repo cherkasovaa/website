@@ -10,7 +10,7 @@ export const AboutSection = (): JSX.Element => {
   const textChunks = useMemo(() => ABOUT_TEXT.split('\n').filter(Boolean), []);
 
   return (
-    <section id={APP_PATHS.ABOUT} className="flex flex-col gap-10">
+    <section id={APP_PATHS.ABOUT} className="flex flex-col">
       <Heading level={2}>{SECTION_TITLE}</Heading>
 
       <div className="flex flex-col gap-10 lg:flex-row">
