@@ -11,24 +11,24 @@ export const HeroSection = (): JSX.Element => {
   const headingClasses = 'text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold';
 
   return (
-    <Section id="hero" className="relative w-full py-25">
+    <Section id="hero" className="relative w-full">
       <h1 className="sr-only">Alina Cherkasova - Front-end developer and web applications creator</h1>
 
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-12 md:gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-12 md:gap-4">
         {/* Front-end */}
         <motion.div {...useFadeInUpAnimation(0.2)} className="order-1 md:col-span-6 md:col-start-1 md:row-start-2">
           <div className={headingClasses}>Front-end</div>
         </motion.div>
 
         {/* Terminal */}
-        <div className="order-5 flex justify-center md:order-none md:col-span-6 md:col-start-7 md:row-start-1 md:row-end-3 md:items-end md:justify-end">
+        <div className="order-5 mt-12 flex justify-center md:order-none md:col-span-6 md:col-start-7 md:row-start-1 md:row-end-3 md:mt-0 md:items-end md:justify-end">
           <Terminal />
         </div>
 
         {/* Description */}
         <motion.div
           {...useFadeInUpAnimation()}
-          className="order-3 self-end md:order-none md:col-span-5 md:col-start-1 md:row-start-1"
+          className="order-3 my-12 self-end md:order-none md:col-span-5 md:col-start-1 md:row-start-1 md:my-0"
         >
           <p className="text-secondary text-base leading-relaxed sm:text-lg">
             My goal is to <span className="text-primary italic">write maintainable, clean,</span> and{' '}
