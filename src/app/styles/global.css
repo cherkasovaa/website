@@ -6,14 +6,14 @@
   --font-secondary: 'Fira Code', monospace;
   --color-primary: #1a2e35;
   --color-secondary: #6b7280;
-  --color-accent: #ae8bf8;
+  --color-accent: #7e4ae7;
   --color-background: #f8fafc;
 }
 
 @layer base {
   .dark {
-    --color-primary: #e2ebff;
-    --color-secondary: #a4b5d8;
+    --color-primary: #ebf1ff;
+    --color-secondary: #bed1f7;
     --color-accent: #3ef6f3;
     --color-background: #0d1830;
   }

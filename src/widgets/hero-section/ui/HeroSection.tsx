@@ -30,7 +30,7 @@ export const HeroSection = (): JSX.Element => {
           {...useFadeInUpAnimation()}
           className="order-3 self-end md:order-none md:col-span-5 md:col-start-1 md:row-start-1"
         >
-          <p className="text-base leading-relaxed text-slate-400 sm:text-lg">
+          <p className="text-secondary text-base leading-relaxed sm:text-lg">
             My goal is to <span className="text-primary italic">write maintainable, clean,</span> and{' '}
             <span className="text-primary italic">scalable code</span> to build fast and beautiful web applications that
             users love.
