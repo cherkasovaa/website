@@ -15,7 +15,7 @@ export const BurgerMenu = ({ handleClick, active }: BurgerMenuProps): JSX.Elemen
       className={cn('burger-menu group z-20 md:hidden', active && 'active')}
     >
       <svg
-        className="text-accent size-10 transition-transform duration-500 group-hover:scale-110"
+        className="text-accent size-12 transition-transform duration-500 group-hover:scale-110"
         viewBox="0 0 100 100"
       >
         <path

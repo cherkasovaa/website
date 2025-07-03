@@ -20,7 +20,7 @@ export const ExperienceCard = ({ experience }: ExperienceCardProps): JSX.Element
         {startPeriod} - {endPeriod}
       </div>
 
-      <div className="mb-6 flex flex-col sm:col-span-6 md:mb-0">
+      <div className="flex flex-col sm:col-span-6 md:mb-0">
         {experience.companyUrl ? (
           <a
             href={experience.companyUrl}

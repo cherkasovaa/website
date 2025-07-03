@@ -22,7 +22,7 @@ export const SkillsSection = (): JSX.Element => {
     <Section id={APP_PATHS.SKILLS}>
       <Heading level={2}>{SECTION_TITLE}</Heading>
 
-      <div className="flex flex-col gap-8 lg:flex-row">
+      <div className="flex flex-col gap-12 md:gap-8 lg:flex-row">
         <div className="flex h-fit flex-wrap gap-4 lg:w-3/5">
           {Object.entries(hardSkillsGroups).map((group) => (
             <HardSkillCard key={group[0]} title={group[0]} skills={group[1]} />
