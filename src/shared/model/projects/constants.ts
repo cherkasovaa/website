@@ -9,7 +9,7 @@ export const projects: Project[] = [
     description:
       'A responsive website for an animal shelter, featuring a burger menu, a random animal card slider, modal windows with detailed animal information, and dynamic pagination adapting to different screen sizes.',
     type: PROJECT_TYPES.WEBSITE,
-    date: '01-01-2024',
+    date: '2024-01-01',
     technologies: [TECHNOLOGIES.HTML, TECHNOLOGIES.SCSS, TECHNOLOGIES.JS, TECHNOLOGIES.BEM],
     githubUrl: '',
     liveUrl: 'https://rolling-scopes-school.github.io/cherkasovaa-JSFEPRESCHOOL2024Q2/shelter/pages/main/',
@@ -21,7 +21,7 @@ export const projects: Project[] = [
     description:
       'A single-page web-based implementation of the classic Japanese Nonograms puzzle game, built with vanilla JavaScript. Features multiple difficulty levels, responsive design, game state saving, dark/light themes, a high score table, and a solution display.',
     type: PROJECT_TYPES.GAME,
-    date: '01-11-2024',
+    date: '2024-11-01',
     technologies: [TECHNOLOGIES.HTML, TECHNOLOGIES.SCSS, TECHNOLOGIES.JS, TECHNOLOGIES.BEM, TECHNOLOGIES.WEBPACK],
     githubUrl: '',
     liveUrl: 'https://rolling-scopes-school.github.io/cherkasovaa-JSFE2024Q4/nonograms/',
@@ -33,7 +33,7 @@ export const projects: Project[] = [
     description:
       'A classic memory training game. Features multiple difficulty levels, random sequence generation, visual key highlighting, input validation, user feedback, and a sequence replay option.',
     type: PROJECT_TYPES.GAME,
-    date: '01-12-2024',
+    date: '2024-12-01',
     technologies: [TECHNOLOGIES.HTML, TECHNOLOGIES.SCSS, TECHNOLOGIES.JS],
     githubUrl: '',
     liveUrl: 'https://rolling-scopes-school.github.io/cherkasovaa-JSFE2024Q4/simon-says/',
@@ -44,7 +44,7 @@ export const projects: Project[] = [
     name: 'Coffee House',
     description: 'Coffee House is a website for a coffee shop featuring a product catalog.',
     type: PROJECT_TYPES.WEBSITE,
-    date: '01-01-2023',
+    date: '2023-01-01',
     technologies: [TECHNOLOGIES.HTML, TECHNOLOGIES.SCSS, TECHNOLOGIES.JS],
     githubUrl: 'https://github.com/cherkasovaa/coffee-house',
     liveUrl: 'https://cherkasovaa.github.io/coffee-house/',
@@ -55,7 +55,7 @@ export const projects: Project[] = [
     name: 'Async Race',
     description: "The project simulates a racing competition between cars from the user's collection.",
     type: PROJECT_TYPES.SPA,
-    date: '01-04-2025',
+    date: '2025-04-01',
     technologies: [TECHNOLOGIES.TS, TECHNOLOGIES.CSS_MODULES, TECHNOLOGIES.WEBPACK, TECHNOLOGIES.FETCH_API],
     githubUrl: 'https://github.com/cherkasovaa/async-race-app',
     liveUrl: 'https://cherkasovaa.github.io/async-race-app/',
@@ -67,7 +67,7 @@ export const projects: Project[] = [
     description:
       'Decision Making Tool is a single-page application (SPA) designed to help make weighted random decisions. This tool allows users to create custom option lists with different weights and visualize the selection process with smooth animations.',
     type: PROJECT_TYPES.SPA,
-    date: '01-03-2025',
+    date: '2025-03-01',
     technologies: [
       TECHNOLOGIES.TS,
       TECHNOLOGIES.CSS_MODULES,
@@ -85,7 +85,7 @@ export const projects: Project[] = [
     description:
       'A festive e-commerce website with a unique Christmas design, featuring a burger menu, an image slider, random gift displays, a New Year countdown timer, gift category switching, a back-to-top button, and modal windows with product details.',
     type: PROJECT_TYPES.WEBSITE,
-    date: '01-01-2025',
+    date: '2025-01-01',
     technologies: [TECHNOLOGIES.HTML, TECHNOLOGIES.SCSS, TECHNOLOGIES.JS, TECHNOLOGIES.BEM],
     githubUrl: 'https://github.com/cherkasovaa/christmas-shop',
     liveUrl: 'https://cherkasovaa.github.io/christmas-shop/',
@@ -97,7 +97,7 @@ export const projects: Project[] = [
     description:
       'A modern single-page application (SPA) created with a love for clean code, user experience, and up-to-date technologies.',
     type: PROJECT_TYPES.SPA,
-    date: '01-06-2025',
+    date: '2025-06-01',
     technologies: [
       TECHNOLOGIES.REACT,
       TECHNOLOGIES.TS,
@@ -116,7 +116,7 @@ export const projects: Project[] = [
     description:
       'A single-page application (SPA) for an online game store. The project features user authentication, logging, convenient navigation between pages, a product catalog with filtering and sorting options, and much more.',
     type: PROJECT_TYPES.SPA,
-    date: '01-05-2025',
+    date: '2025-05-01',
     technologies: [
       TECHNOLOGIES.REACT,
       TECHNOLOGIES.TS,
