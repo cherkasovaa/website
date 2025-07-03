@@ -11,7 +11,7 @@ export const HeroSection = (): JSX.Element => {
   const headingClasses = 'text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold';
 
   return (
-    <Section id="hero" className="relative w-full px-4 py-25">
+    <Section id="hero" className="relative w-full py-25">
       <h1 className="sr-only">Alina Cherkasova - Front-end developer and web applications creator</h1>
 
       <div className="grid grid-cols-1 gap-6 md:grid-cols-12 md:gap-4">
