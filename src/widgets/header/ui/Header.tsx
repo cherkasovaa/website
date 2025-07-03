@@ -51,9 +51,7 @@ export const Header = (): JSX.Element => {
           aria-label="resume (opens in a new tab)"
         />
 
-        <div className="border-accent z-20 flex h-12 w-12 items-center justify-center rounded-sm border-1 md:hidden">
-          <BurgerMenu handleClick={toggleMenu} active={isMenuOpen} />
-        </div>
+        <BurgerMenu handleClick={toggleMenu} active={isMenuOpen} />
 
         {isMenuOpen && (
           <div className="bg-background fixed top-0 left-0 z-10 block h-full w-full px-4 py-8 md:hidden">

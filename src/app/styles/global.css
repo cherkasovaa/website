@@ -64,3 +64,27 @@
 .animate-blink {
   animation: blink 1s step-end infinite;
 }
+
+.burger-menu .top {
+  stroke-dasharray: 40 172;
+}
+
+.burger-menu .middle {
+  stroke-dasharray: 40 111;
+}
+
+.burger-menu .bottom {
+  stroke-dasharray: 40 172;
+}
+
+.burger-menu.active .top {
+  stroke-dashoffset: -132px;
+}
+
+.burger-menu.active .middle {
+  stroke-dashoffset: -71px;
+}
+
+.burger-menu.active .bottom {
+  stroke-dashoffset: -132px;
+}
