@@ -2,51 +2,47 @@ import type { HardSkill } from './types';
 
 export const hardSkills: HardSkill[] = [
   {
-    category: 'Basic',
-    skills: ['HTML (HTML5)'],
+    category: 'Development', //Basic
+    skills: ['HTML5'],
   },
   {
     category: 'Styles',
-    skills: ['CSS (CSS3)', 'SASS (SCSS)', 'TailwindCSS', 'Material UI'],
+    skills: ['CSS3', 'SASS (SCSS)', 'Tailwind CSS', 'Material UI'],
   },
   {
-    category: 'Languages',
+    category: 'Development', // Languages
     skills: ['JavaScript (ES6+, OOP)', 'TypeScript'],
   },
   {
-    category: 'Frameworks',
+    category: 'Development', // Frameworks
     skills: ['React'],
   },
   {
-    category: 'State Managers',
-    skills: ['Tanstack Query'],
-  },
-  {
-    category: 'Libraries',
+    category: 'Development', // Libraries
     skills: ['React Router'],
   },
   {
-    category: 'Architecture & Methodologies',
+    category: 'Knowledge', // Architecture & Methodologies
     skills: ['Feature-Sliced Design (FSD)', 'BEM'],
   },
   {
-    category: 'Repositories',
+    category: 'Tools', // Repositories
     skills: ['Git (GitHub)'],
   },
   {
-    category: 'Build',
+    category: 'Tools', // Build
     skills: ['Vite', 'Webpack'],
   },
   {
-    category: 'API & Data',
+    category: 'Knowledge', // API & Data
     skills: ['REST API', 'WebSockets'],
   },
   {
-    category: 'Design',
+    category: 'Design', // Design
     skills: ['Figma', 'Photoshop'],
   },
   {
-    category: 'Testing',
-    skills: ['Vitest'],
+    category: 'Knowledge', // Others
+    skills: ['SEO', 'Wordpress', 'CI/CD'],
   },
 ];
