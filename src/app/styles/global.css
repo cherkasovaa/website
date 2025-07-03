@@ -1,33 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Fira+Code:wght@300..700&display=swap');
 @import url('tailwindcss');
 
 @theme {
-  --font-primary: 'Poiret One', sans-serif;
-  --font-secondary: 'Roboto', sans-serif;
+  --font-primary: 'Figtree', sans-serif;
+  --font-secondary: 'Fira Code', monospace;
   --color-primary: #1a2e35;
   --color-secondary: #6b7280;
-  --color-accent: #ae8bf8;
+  --color-accent: #7e4ae7;
   --color-background: #f8fafc;
 }
 
 @layer base {
   .dark {
-    --color-primary: #e2ebff;
-    --color-secondary: #a4b5d8;
+    --color-primary: #ebf1ff;
+    --color-secondary: #bed1f7;
     --color-accent: #3ef6f3;
     --color-background: #0d1830;
   }
 
   body {
-    @apply font-secondary text-primary bg-background h-full min-h-screen overflow-x-hidden scroll-smooth;
-  }
-
-  section {
-    @apply flex flex-1 py-10 md:py-20;
+    @apply font-primary text-primary bg-background h-full min-h-screen cursor-default overflow-x-hidden scroll-smooth;
   }
 
   a {
-    @apply text-secondary hover:text-accent font-secondary transition duration-200;
+    @apply text-secondary hover:text-accent transition duration-200;
+  }
+
+  h2::before {
+    content: '... /';
+  }
+
+  h2::after {
+    content: ' ...';
+  }
+
+  h2::before,
+  h2::after {
+    @apply tracking-tighter text-inherit;
   }
 }
 
@@ -39,4 +48,43 @@
   .burger-toggle {
     @apply [&>div]:bg-background [&>div]:h-0 [&>div]:before:translate-y-0 [&>div]:before:rotate-45 [&>div]:after:translate-y-0 [&>div]:after:-rotate-45;
   }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+.animate-blink {
+  animation: blink 1s step-end infinite;
+}
+
+.burger-menu .top {
+  stroke-dasharray: 40 172;
+}
+
+.burger-menu .middle {
+  stroke-dasharray: 40 111;
+}
+
+.burger-menu .bottom {
+  stroke-dasharray: 40 172;
+}
+
+.burger-menu.active .top {
+  stroke-dashoffset: -132px;
+}
+
+.burger-menu.active .middle {
+  stroke-dashoffset: -71px;
+}
+
+.burger-menu.active .bottom {
+  stroke-dashoffset: -132px;
 }

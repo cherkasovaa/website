@@ -13,9 +13,9 @@ export const tagMap: Record<HeadingLevel, keyof JSX.IntrinsicElements> = {
 
 export const levelClasses: Record<HeadingLevel, string> = {
   1: 'text-4xl sm:text-5xl font-bold tracking-tight text-balance',
-  2: 'text-3xl sm:text-4xl font-medium tracking-tight text-balance',
-  3: 'text-xl font-medium tracking-tight text-balance',
-  4: 'text-xl sm:text-2xl font-medium tracking-tight text-balance',
-  5: 'text-lg  sm:text-xl font-medium tracking-tight text-balance',
-  6: 'text-base sm:text-lg font-medium tracking-tight text-balance',
+  2: 'text-lg font-secondary font-light tracking-tight text-balance mb-6',
+  3: 'text-lg font-primary font-normal tracking-wide text-secondary text-balance',
+  4: 'text-lg font-medium tracking-tight text-balance',
+  5: 'text-base font-medium tracking-tight text-balance',
+  6: 'text-base font-medium tracking-tight text-balance',
 };

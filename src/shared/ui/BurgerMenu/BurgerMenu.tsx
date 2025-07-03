@@ -1,5 +1,6 @@
 import type { JSX } from 'react';
 
+import { cn } from '~/shared/lib/utils/cn';
 import type { ClickableProps } from '~/shared/model/interfaces';
 
 interface BurgerMenuProps extends ClickableProps {
@@ -7,17 +8,32 @@ interface BurgerMenuProps extends ClickableProps {
 }
 
 export const BurgerMenu = ({ handleClick, active }: BurgerMenuProps): JSX.Element => {
-  const toggleMenu = (): void => {
-    handleClick();
-  };
-
   return (
-    <div
+    <button
+      onClick={handleClick}
       aria-label={active ? 'Close menu' : 'Open menu'}
-      className={`grid cursor-pointer place-content-center ${active ? 'burger-toggle' : ''}`}
-      onClick={toggleMenu}
+      className={cn('burger-menu group z-20 md:hidden', active && 'active')}
     >
-      <div className="bg-accent before:bg-accent after:bg-accent h-0.5 w-8 rounded-full transition-all duration-150 before:absolute before:h-0.5 before:w-8 before:-translate-y-2.5 before:rounded-full before:transition-all before:duration-150 before:content-[''] after:absolute after:h-0.5 after:w-8 after:translate-y-2.5 after:rounded-full after:transition-all after:duration-150 after:content-['']"></div>
-    </div>
+      <svg
+        className="text-accent size-10 transition-transform duration-500 group-hover:scale-110"
+        viewBox="0 0 100 100"
+      >
+        <path
+          className="line top fill-none stroke-current transition-all duration-500"
+          style={{ strokeWidth: 5.5, strokeLinecap: 'round' }}
+          d="m 30,33 h 40 c 13.100415,0 14.380204,31.80258 6.899646,33.421777 -24.612039,5.327373 9.016154,-52.337577 -12.75751,-30.563913 l -28.284272,28.284272"
+        />
+        <path
+          className="line middle fill-none stroke-current transition-all duration-500"
+          style={{ strokeWidth: 5.5, strokeLinecap: 'round' }}
+          d="m 70,50 c 0,0 -32.213436,0 -40,0 -7.786564,0 -6.428571,-4.640244 -6.428571,-8.571429 0,-5.895471 6.073743,-11.783399 12.286435,-5.570707 6.212692,6.212692 28.284272,28.284272 28.284272,28.284272"
+        />
+        <path
+          className="line bottom fill-none stroke-current transition-all duration-500"
+          style={{ strokeWidth: 5.5, strokeLinecap: 'round' }}
+          d="m 69.575405,67.073826 h -40 c -13.100415,0 -14.380204,-31.80258 -6.899646,-33.421777 24.612039,-5.327373 -9.016154,52.337577 12.75751,30.563913 l 28.284272,-28.284272"
+        />
+      </svg>
+    </button>
   );
 };

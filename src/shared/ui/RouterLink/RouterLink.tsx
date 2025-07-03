@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { scrollToSection } from '~/shared/lib/utils/scrollToSection';
 import type { LinkProps } from '~/shared/model/interfaces';
 
-export const RouterLink = ({ path, content, handleClick, isAnchor = false }: LinkProps): JSX.Element => {
+export const RouterLink = ({ path, content, handleClick, isAnchor = false, className }: LinkProps): JSX.Element => {
   const to = isAnchor ? `#${path}` : path;
 
   const handleLinkClick = (e: React.MouseEvent): void => {
@@ -19,7 +19,7 @@ export const RouterLink = ({ path, content, handleClick, isAnchor = false }: Lin
   };
 
   return (
-    <Link to={to} onClick={(e) => handleLinkClick(e)}>
+    <Link to={to} onClick={(e) => handleLinkClick(e)} className={className}>
       {content}
     </Link>
   );

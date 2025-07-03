@@ -3,6 +3,7 @@ export interface LinkProps {
   content: string;
   handleClick?: () => void;
   isAnchor?: boolean;
+  className?: string;
 }
 
 export interface ClickableProps {

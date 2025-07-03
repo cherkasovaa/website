@@ -1,19 +1,26 @@
-import type { JSX } from 'react';
+import { type JSX, memo } from 'react';
 
+import { cn } from '~/shared/lib/utils/cn';
 import { Heading, SkillCard } from '~/shared/ui';
 
 import type { SkillListProps } from '../model/types';
 
-export const SkillList = ({ title, skills }: SkillListProps): JSX.Element => {
+export const SkillList = memo(({ title, skills, className = '' }: SkillListProps): JSX.Element => {
   return (
-    <div className="flex flex-col gap-6">
-      <Heading level={2}>{title}</Heading>
+    <div className={cn('flex flex-col', className)}>
+      <Heading level={3} className="mb-6">
+        {title}
+      </Heading>
 
-      <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-1 lg:gap-4">
-        {skills.map((group, idx) => (
-          <SkillCard key={group.join('~')} group={group} index={idx} />
-        ))}
+      <ul className="flex flex-col gap-2">
+        {skills.map((skill, idx) => {
+          if (typeof skill === 'string') {
+            return <SkillCard key={skill} text={skill} index={idx} />;
+          }
+
+          return null;
+        })}
       </ul>
     </div>
   );
-};
+});
