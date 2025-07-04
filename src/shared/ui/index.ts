@@ -8,5 +8,6 @@ export { Image } from './Image/Image';
 export { Logo } from './Logo/Logo';
 export { RouterLink } from './RouterLink/RouterLink';
 export { Section } from './Section/Section';
+export { Skeleton } from './Skeleton/Skeleton';
 export { SkillCard } from './SkillCard/SkillCard';
 export { TechStack } from './TechStack/TechStack';
