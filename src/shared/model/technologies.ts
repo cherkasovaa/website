@@ -19,6 +19,7 @@ export const TECHNOLOGIES = {
   CANVAS_API: 'Canvas API',
   FILE_API: 'File API',
   NETLIFY: 'Netlify',
+  VERCEL: 'Vercel',
   WORDPRESS: 'Wordpress',
   SEO: 'SEO',
 } as const;
