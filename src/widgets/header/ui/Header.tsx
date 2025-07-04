@@ -1,8 +1,10 @@
 import { type JSX, useEffect, useState } from 'react';
 
+import { Link } from 'react-router-dom';
+
 import { NavigationMenu } from '~/features/navigation-menu';
 import { APP_PATHS } from '~/shared/config/router/paths';
-import { BurgerMenu, Logo, RouterLink } from '~/shared/ui';
+import { BurgerMenu, Logo } from '~/shared/ui';
 
 export const Header = (): JSX.Element => {
   const [isMobile, setIsMobile] = useState<boolean>(false);
@@ -32,24 +34,24 @@ export const Header = (): JSX.Element => {
   }, [isMenuOpen]);
 
   const toggleMenu = (): void => setIsMenuOpen((prev) => !prev);
-  const handleResumeView = (): Window | null => window.open(APP_PATHS.RESUME, '_blank');
 
   return (
-    <header className="header p-4">
-      <div className="container mx-auto flex items-center justify-between">
+    <header className="header">
+      <div className="container mx-auto flex items-center justify-between p-4">
         <Logo />
 
         <div className="hidden md:flex">
           <NavigationMenu />
         </div>
 
-        <RouterLink
-          path={APP_PATHS.RESUME}
-          content="Resume"
-          handleClick={handleResumeView}
+        <Link
+          to={APP_PATHS.RESUME}
+          target="_blank"
           className="border-accent hover:text-background bg-accent/10 hover:bg-accent text-accent text-md inline-block rounded-full px-5 py-1 text-center transition-colors"
           aria-label="resume (opens in a new tab)"
-        />
+        >
+          Resume
+        </Link>
 
         <BurgerMenu handleClick={toggleMenu} active={isMenuOpen} />
 
