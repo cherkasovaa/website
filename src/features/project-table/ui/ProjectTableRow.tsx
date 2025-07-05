@@ -1,6 +1,7 @@
-import type { JSX } from 'react';
+import { type JSX } from 'react';
 
 import { SquareArrowOutUpRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 import { formatUrl } from '~/shared/lib/utils/formatUrl';
 import { PROJECT_TYPES } from '~/shared/model/projects/types';
@@ -16,7 +17,24 @@ export const ProjectTableRow = ({ project }: ProjectTableRowProps): JSX.Element 
         {new Date(project.date).getFullYear()}
       </td>
       {/* Project Name  */}
-      <td className="text-primary py-4 pr-4 align-top leading-snug font-semibold">{project.name}</td>
+      <td className="text-primary py-4 pr-4 align-top leading-snug font-semibold sm:whitespace-nowrap">
+        <div className="block sm:hidden">
+          <Link
+            to={project.liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group mb-2.5 flex items-baseline gap-1.5"
+          >
+            <span>{formatUrl(project.name)}</span>
+            <SquareArrowOutUpRight
+              strokeWidth={1}
+              size={12}
+              className="transition-all duration-300 group-hover:-translate-y-2"
+            />
+          </Link>
+        </div>
+        <div className="hidden sm:block">{project.name}</div>
+      </td>
 
       {/* Project Type  */}
       <td className="text-secondary hidden py-4 pr-4 align-top text-sm leading-snug font-semibold lg:table-cell">
@@ -33,9 +51,9 @@ export const ProjectTableRow = ({ project }: ProjectTableRowProps): JSX.Element 
       </td>
 
       {/* Deploy link  */}
-      <td className="hidden py-4 align-top sm:table-cell">
-        <a
-          href={project.liveUrl}
+      <td className="hidden py-4 align-top sm:table-cell sm:whitespace-nowrap">
+        <Link
+          to={project.liveUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="group mb-2.5 flex items-baseline gap-1.5"
@@ -46,7 +64,7 @@ export const ProjectTableRow = ({ project }: ProjectTableRowProps): JSX.Element 
             size={12}
             className="transition-all duration-300 group-hover:-translate-y-2"
           />
-        </a>
+        </Link>
       </td>
     </tr>
   );

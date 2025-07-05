@@ -104,7 +104,7 @@ export const projects: Project[] = [
       TECHNOLOGIES.TAILWIND,
       TECHNOLOGIES.REACT_ROUTER,
       TECHNOLOGIES.VITE,
-      TECHNOLOGIES.NETLIFY,
+      TECHNOLOGIES.VERCEL,
     ],
     githubUrl: 'https://github.com/cherkasovaa/website',
     liveUrl: 'https://cherkasovaa.netlify.app/',

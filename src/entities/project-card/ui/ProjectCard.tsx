@@ -51,6 +51,7 @@ export const ProjectCard = ({ project }: ProjectCardProps): JSX.Element => {
         <Image
           alt={`${project.name} screen`}
           src={imageUrl}
+          fallbackSrc={PLACEHOLDER_URL}
           className="h-64 w-full rounded-lg object-cover object-top shadow-lg"
         />
       </div>

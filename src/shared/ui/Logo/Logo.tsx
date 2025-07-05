@@ -6,7 +6,7 @@ import { APP_PATHS } from '~/shared/config/router/paths';
 
 export const Logo = (): JSX.Element => {
   return (
-    <div className="h-12 w-12">
+    <div className="mr-auto w-min pr-4">
       <Link to={APP_PATHS.HOME} aria-label="To home page" className="text-lg leading-none">
         Alina Cherkasova
       </Link>

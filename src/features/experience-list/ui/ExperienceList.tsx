@@ -15,7 +15,7 @@ export const ExperienceList = ({ limit = 3, showAll = false }: ListProps): JSX.E
   return (
     <ul className="portfolio-list">
       {latestExperience.map((experience) => (
-        <li key={experience.id} className="portfolio-item mb-6">
+        <li key={experience.id} className="mb-6 last:mb-0">
           <Card>
             <ExperienceCard experience={experience} />
           </Card>

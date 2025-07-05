@@ -10,7 +10,7 @@ export const Card = ({ children, className }: CardProps): JSX.Element => {
 
   return (
     <div className={cn(defaultClasses, className)}>
-      <div className="p-5">{children}</div>
+      <div className="p-2 md:p-5">{children}</div>
     </div>
   );
 };
