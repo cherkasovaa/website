@@ -9,10 +9,11 @@ This project reflects my professional approach and commitment to continuous grow
 
 ## Technology Stack
 ### Core technologies
-- React 19
+- React 18
 - TypeScript
 - Vite
 - Tailwind CSS
+- React Helmet Async
 
 ### Code Quality Tools
 - ESLint
