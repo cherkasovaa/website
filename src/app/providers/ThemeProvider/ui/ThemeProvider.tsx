@@ -1,23 +1,20 @@
-import { type JSX, useEffect, useState } from 'react';
+import { type JSX, useCallback, useEffect, useState } from 'react';
 
-import { ThemeContext } from '../model/context';
-import { THEME, type Theme, type ThemeProviderProps } from '../model/types';
+import { THEME_KEY } from '~/shared/config/theme/constants';
+import { getInitialTheme } from '~/shared/lib/utils/getInitialTheme';
+import { getSystemTheme } from '~/shared/lib/utils/getSystemTheme';
+import { ThemeContext } from '~/shared/model/providers/context';
+import { type Theme, THEME_MODE, type ThemeProviderProps } from '~/shared/model/providers/types';
 
 export const ThemeProvider = ({ children }: ThemeProviderProps): JSX.Element => {
-  const getSystemTheme = (): Theme =>
-    window.matchMedia('(prefers-color-scheme: dark)').matches ? THEME.DARK : THEME.LIGHT;
-
-  const toggleTheme = (): void => {
-    setTheme((prevTheme) => (prevTheme === THEME.LIGHT ? THEME.DARK : THEME.LIGHT));
-  };
-
-  const [theme, setTheme] = useState<Theme>(getSystemTheme);
+  const [theme, setUserTheme] = useState<Theme>(getInitialTheme);
+  const [systemTheme, setSystemTheme] = useState<Theme>(getSystemTheme);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
     const handleChange = (e: MediaQueryListEvent): void => {
-      setTheme(e.matches ? THEME.DARK : THEME.LIGHT);
+      setSystemTheme(e.matches ? THEME_MODE.DARK : THEME_MODE.LIGHT);
     };
 
     mediaQuery.addEventListener('change', handleChange);
@@ -27,9 +24,15 @@ export const ThemeProvider = ({ children }: ThemeProviderProps): JSX.Element => 
 
   useEffect(() => {
     const root = window.document.documentElement;
-    root.classList.remove(THEME.DARK, THEME.LIGHT);
-    root.classList.add(theme);
-  }, [theme]);
+    root.classList.remove(THEME_MODE.DARK, THEME_MODE.LIGHT);
+    const appliedTheme = theme === THEME_MODE.SYSTEM ? systemTheme : theme;
+    root.classList.add(appliedTheme);
+  }, [theme, systemTheme]);
 
-  return <ThemeContext.Provider value={{ theme, toggleTheme }}>{children}</ThemeContext.Provider>;
+  const setTheme = useCallback((newTheme: Theme): void => {
+    localStorage.setItem(THEME_KEY, newTheme);
+    setUserTheme(newTheme);
+  }, []);
+
+  return <ThemeContext.Provider value={{ theme, setTheme }}>{children}</ThemeContext.Provider>;
 };

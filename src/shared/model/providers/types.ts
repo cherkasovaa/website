@@ -1,11 +1,12 @@
 import type { ReactNode } from 'react';
 
-export const THEME = {
-  LIGHT: 'light',
+export const THEME_MODE = {
   DARK: 'dark',
+  LIGHT: 'light',
+  SYSTEM: 'system',
 } as const;
 
-export type Theme = (typeof THEME)[keyof typeof THEME];
+export type Theme = (typeof THEME_MODE)[keyof typeof THEME_MODE];
 
 export interface ThemeProviderProps {
   children: ReactNode;
@@ -13,5 +14,5 @@ export interface ThemeProviderProps {
 
 export interface ThemeContextType {
   theme: Theme;
-  toggleTheme: () => void;
+  setTheme: (_: Theme) => void;
 }

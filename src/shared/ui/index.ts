@@ -11,3 +11,4 @@ export { Section } from './Section/Section';
 export { Skeleton } from './Skeleton/Skeleton';
 export { SkillCard } from './SkillCard/SkillCard';
 export { TechStack } from './TechStack/TechStack';
+export { ThemeSwitcher } from './ThemeSwitcher/ThemeSwitcher';
