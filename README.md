@@ -74,16 +74,17 @@ npm install
 
 ### Available Scripts
 
-| Script            |  Description                                              |
-|:------------------|:----------------------------------------------------------|
-| npm run dev       | Runs the app in development mode using Vite               |
-| npm run build     | Builds the app for production using TypeScript and Vite   |
-| npm run preview   | Serves the production build locally                       |
-| npm run lint      | Runs ESLint to analyze code for issues                    |
-| npm run lint:fix  | Automatically fixes code issues                           |
-| npm run format    | Automatically fixes formatting issues                     |
-| npm run prepare   | Runs husky                                                |
-| npm run test      | Runs all unit tests using Vitest                          |
+| Script               |  Description                                              |
+|:---------------------|:----------------------------------------------------------|
+| npm run dev          | Runs the app in development mode using Vite               |
+| npm run build        | Builds the app for production using TypeScript and Vite   |
+| npm run preview      | Serves the production build locally                       |
+| npm run lint         | Runs ESLint to analyze code for issues                    |
+| npm run lint:fix     | Automatically fixes code issues                           |
+| npm run format       | Automatically fixes formatting issues                     |
+| npm run format:check | Checks for formatting issues without fixing them          |
+| npm run prepare      | Runs husky                                                |
+| npm run test         | Runs all unit tests using Vitest                          |
 
 ## Contact Me
 
