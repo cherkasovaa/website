@@ -27,7 +27,7 @@ export const hardSkills: HardSkill[] = [
   },
   {
     category: 'Tools', // Repositories
-    skills: ['Git (GitHub)'],
+    skills: ['Git'],
   },
   {
     category: 'Tools', // Build
