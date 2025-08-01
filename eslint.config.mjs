@@ -1,25 +1,24 @@
 import js from '@eslint/js';
-import prettier from 'eslint-config-prettier';
 import fsdArchitectureChecker from 'eslint-plugin-fsd-architecture-checker';
 import pluginImport from 'eslint-plugin-import';
-import pluginReact from 'eslint-plugin-react';
+import eslintPluginPrettier from 'eslint-plugin-prettier/recommended';
+import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
-import pluginUnicorn from 'eslint-plugin-unicorn';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
   // Ignore files
   {
-    ignores: ['dist/**', 'build/**', 'node_modules/**', 'public/**', '.vite/**', '**/*.config.*', 'global.d.ts'],
+    ignores: ['dist/**', 'build/**', 'node_modules/**', 'public/**', '.vite/**', '**/*.config.*', '*.d.ts'],
   },
   {
     extends: [
       js.configs.recommended,
-      ...tseslint.configs.recommended,
-      ...tseslint.configs.stylistic,
-      pluginReact.configs.flat.recommended,
+      ...tseslint.configs.strict,
+      react.configs.flat.recommended,
+      eslintPluginPrettier
     ],
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
@@ -31,8 +30,7 @@ export default tseslint.config(
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
       'fsd-architecture-checker': fsdArchitectureChecker,
-      react: pluginReact,
-      unicorn: pluginUnicorn,
+      react,
       import: pluginImport,
     },
     settings: {
@@ -58,12 +56,6 @@ export default tseslint.config(
       },
     },
     rules: {
-      // Unicorn rules
-      'unicorn/no-null': 'warn',
-      'unicorn/filename-case': 'off',
-      'unicorn/prevent-abbreviations': 'off',
-      'unicorn/no-array-reduce': 'off',
-
       // General rules
       'no-console': ['warn', { allow: ['warn', 'error'] }],
       'no-unused-vars': 'off',
@@ -81,15 +73,11 @@ export default tseslint.config(
       '@typescript-eslint/no-explicit-any': 'warn',
 
       // React rules
-      'react/react-in-jsx-scope': 'off',
-      'react/jsx-uses-react': 'off',
-      'react/prop-types': 'off',
-      'react/display-name': 'off',
+      ...react.configs.recommended.rules,
+      ...react.configs['jsx-runtime'].rules,
 
       // React Hooks rules
       ...reactHooks.configs.recommended.rules,
-      'react-hooks/rules-of-hooks': 'error',
-      'react-hooks/exhaustive-deps': 'warn',
 
       // React Refresh
       'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
@@ -147,6 +135,4 @@ export default tseslint.config(
       '@typescript-eslint/explicit-member-accessibility': 'off',
     },
   },
-
-  prettier,
 );
