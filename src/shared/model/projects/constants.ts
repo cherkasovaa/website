@@ -4,6 +4,40 @@ import { type Project, PROJECT_TYPES } from './types';
 
 export const projects: Project[] = [
   {
+    id: 'pokedex-pokemon-search',
+    name: 'Pokédex | Pokémon Search App',
+    description: 'An application for searching and viewing Pokémon.',
+    type: PROJECT_TYPES.SPA,
+    date: '2025-07-31',
+    technologies: [
+      TECHNOLOGIES.REACT,
+      TECHNOLOGIES.TS,
+      TECHNOLOGIES.TAILWIND,
+      TECHNOLOGIES.REACT_ROUTER,
+      TECHNOLOGIES.ZUSTAND,
+    ],
+    githubUrl: 'https://github.com/cherkasovaa/pokedex-pokemon-search/',
+    liveUrl: 'https://pokedex-pokemon-search.vercel.app/',
+    imageUrl: 'pokedex.png',
+  },
+  {
+    id: 'github-search',
+    name: 'Pokédex | Pokémon Search App',
+    description: 'An application for searching GitHub repositories.',
+    type: PROJECT_TYPES.SPA,
+    date: '2025-07-23',
+    technologies: [
+      TECHNOLOGIES.REACT,
+      TECHNOLOGIES.TS,
+      TECHNOLOGIES.MATERIAL_UI,
+      TECHNOLOGIES.CSS_MODULES,
+      TECHNOLOGIES.RTK,
+    ],
+    githubUrl: 'https://github.com/cherkasovaa/github-search',
+    liveUrl: 'https://gh-discover.vercel.app/',
+    imageUrl: 'github-search.png',
+  },
+  {
     id: 'shelter',
     name: 'Shelter',
     description:

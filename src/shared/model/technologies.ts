@@ -9,6 +9,8 @@ export const TECHNOLOGIES = {
   REACT: 'React',
   REACT_ROUTER: 'React Router',
   TANSTACK: 'Tanstack',
+  ZUSTAND: 'Zustand',
+  RTK: 'Redux Toolkit (RTK)',
   TAILWIND: 'Tailwind CSS',
   MATERIAL_UI: 'Material UI',
   BEM: 'BEM',
