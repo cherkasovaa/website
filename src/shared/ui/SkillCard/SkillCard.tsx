@@ -1,4 +1,4 @@
-import { type JSX, memo } from 'react';
+import { memo } from 'react';
 
 import { motion } from 'motion/react';
 
@@ -10,7 +10,7 @@ interface SkillCardProps {
   index: number;
 }
 
-export const SkillCard = memo(({ text, index }: SkillCardProps): JSX.Element => {
+export const SkillCard = memo(function SkillCard({ text, index }: SkillCardProps) {
   return (
     <motion.li {...useFadeInLeftAnimation(index)} className="text-secondary py-2">
       {formatStringWithSplit(text)}

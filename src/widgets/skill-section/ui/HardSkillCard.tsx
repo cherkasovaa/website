@@ -1,8 +1,8 @@
-import { type JSX, memo } from 'react';
+import { memo } from 'react';
 
 import { Heading } from '~/shared/ui';
 
-export const HardSkillCard = memo(({ title, skills }: { title: string; skills: string[] }): JSX.Element => {
+export const HardSkillCard = memo(function HardSkillCard({ title, skills }: { title: string; skills: string[] }) {
   const middleIndex = skills.length > 3 ? Math.floor(skills.length / 2) : skills.length;
 
   const firstLineSkills = skills.slice(0, middleIndex);

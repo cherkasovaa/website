@@ -1,6 +1,6 @@
-import { type JSX, memo } from 'react';
+import { memo } from 'react';
 
-export const InputLine = memo(({ text }: { text: string }): JSX.Element => {
+export const InputLine = memo(function InputLine({ text }: { text: string }) {
   return (
     <div className="flex">
       <span>{'> ' + text}</span>
