@@ -1,11 +1,11 @@
-import { type JSX, memo } from 'react';
+import { memo } from 'react';
 
 import { cn } from '~/shared/lib/utils/cn';
 import { Heading, SkillCard } from '~/shared/ui';
 
 import type { SkillListProps } from '../model/types';
 
-export const SkillList = memo(({ title, skills, className = '' }: SkillListProps): JSX.Element => {
+export const SkillList = memo(function SkillList({ title, skills, className = '' }: SkillListProps) {
   return (
     <div className={cn('flex flex-col', className)}>
       <Heading level={3} className="mb-6">

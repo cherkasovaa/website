@@ -48,14 +48,19 @@ export const experience: Experience[] = [
     technologies: [TECHNOLOGIES.WORDPRESS, TECHNOLOGIES.SEO, TECHNOLOGIES.CSS, TECHNOLOGIES.PHP],
     projects: [
       {
+        id: 'smmsova',
+        name: 'SMM Sova',
+        link: 'https://smmsova.ru/',
+      },
+      {
         id: 'kosmetbeauty',
         name: 'Kosmet Beauty',
         link: 'https://kosmetbeauty.pl/',
       },
       {
-        id: 'smmsova',
-        name: 'SMM Sova',
-        link: 'https://smmsova.ru/',
+        id: 'cleanglow',
+        name: 'Clean Glow',
+        link: 'https://cleanglow.pl/',
       },
     ],
     type: JOB_TYPES.FREELANCE,

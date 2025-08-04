@@ -1,6 +1,6 @@
-import { type JSX, memo } from 'react';
+import { memo } from 'react';
 
-export const CommandLines = memo(({ lines }: { lines: string[] }): JSX.Element => {
+export const CommandLines = memo(function CommandLines({ lines }: { lines: string[] }) {
   return (
     <>
       {lines.map((cmd, index) => (
