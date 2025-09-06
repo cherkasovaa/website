@@ -15,7 +15,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 
   return (
     <html lang="en">
-      <body suppressHydrationWarning={true}>
+      <body className={initialTheme} suppressHydrationWarning={true}>
         <ThemeProvider defaultTheme={initialTheme}>
           <div id="root">
             <Header />
