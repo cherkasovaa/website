@@ -1,9 +1,11 @@
+'use client';
+
 import { memo } from 'react';
 
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 
-import { useFadeInLeftAnimation } from '~/shared/lib/hooks/useFadeInLeftAnimation';
-import { formatStringWithSplit } from '~/shared/lib/utils/formatStringWithSplit';
+import { useFadeInLeftAnimation } from '@/shared/lib/hooks/useFadeInLeftAnimation';
+import { formatStringWithSplit } from '@/shared/lib/utils/formatStringWithSplit';
 
 interface SkillCardProps {
   text: string;
