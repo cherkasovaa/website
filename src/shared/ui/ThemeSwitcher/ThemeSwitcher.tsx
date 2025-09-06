@@ -1,3 +1,5 @@
+'use client';
+
 import { type JSX } from 'react';
 
 import { Monitor, Moon, Sun } from 'lucide-react';
