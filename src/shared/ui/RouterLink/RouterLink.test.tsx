@@ -26,7 +26,7 @@ describe('RouterLink', () => {
       render(
         <MemoryRouter>
           <RouterLink path={path} content={text} />
-        </MemoryRouter>,
+        </MemoryRouter>
       );
 
       const link = screen.getByRole('link', { name: new RegExp(text, 'i') });
@@ -40,7 +40,7 @@ describe('RouterLink', () => {
       render(
         <MemoryRouter>
           <RouterLink path="/about" content="About" handleClick={handleClick} />
-        </MemoryRouter>,
+        </MemoryRouter>
       );
 
       const link = screen.getByRole('link', { name: /about/i });
@@ -60,7 +60,7 @@ describe('RouterLink', () => {
       render(
         <MemoryRouter>
           <RouterLink path={path} content={text} isAnchor={true} />
-        </MemoryRouter>,
+        </MemoryRouter>
       );
 
       const link = screen.getByRole('link', { name: new RegExp(text, 'i') });
@@ -74,7 +74,7 @@ describe('RouterLink', () => {
       render(
         <MemoryRouter>
           <RouterLink path="about" content="About" isAnchor={true} handleClick={handleClick} />
-        </MemoryRouter>,
+        </MemoryRouter>
       );
 
       const link = screen.getByRole('link', { name: /about/i });

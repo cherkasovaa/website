@@ -36,7 +36,7 @@ export const Image = ({ alt, src, className, fallbackSrc }: ImageProps): JSX.Ele
         className={cn(
           className,
           'transition-opacity duration-300',
-          isLoading ? 'absolute inset-0 opacity-0' : 'opacity-100',
+          isLoading ? 'absolute inset-0 opacity-0' : 'opacity-100'
         )}
         loading="lazy"
         onLoad={handleLoad}

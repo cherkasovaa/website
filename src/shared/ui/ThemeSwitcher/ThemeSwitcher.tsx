@@ -23,7 +23,7 @@ export const ThemeSwitcher = (): JSX.Element => {
           onClick={() => setTheme(value)}
           className={cn(
             'hover:text-secondary cursor-pointer text-sm transition-colors',
-            theme === value ? 'text-accent' : 'text-primary',
+            theme === value ? 'text-accent' : 'text-primary'
           )}
           title={`Switch to ${label.toLowerCase()} theme`}
           aria-label={label}

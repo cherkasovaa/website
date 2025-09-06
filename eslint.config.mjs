@@ -11,7 +11,7 @@ import tseslint from 'typescript-eslint';
 export default tseslint.config(
   // Ignore files
   {
-    ignores: ['dist/**', 'build/**', 'node_modules/**', 'public/**', '.vite/**', '**/*.config.*', '*.d.ts'],
+    ignores: ['dist/**', 'out/**', 'build/**', 'node_modules/**', 'public/**', '.next/**', '**/*.config.*', '*.d.ts'],
   },
   {
     extends: [

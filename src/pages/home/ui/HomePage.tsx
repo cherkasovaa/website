@@ -13,13 +13,9 @@ export const HomePage = (): JSX.Element => {
   return (
     <>
       <SEO title={SEO_PAGE_TITLE} description={SEO_PAGE_DESCRIPTION} />
-
       <HeroSection />
-
       <AboutSection />
-
       <ExperienceSection />
-
       <SkillsSection />
 
       <PortfolioSection />
