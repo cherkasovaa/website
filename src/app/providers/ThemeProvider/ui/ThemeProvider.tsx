@@ -2,9 +2,9 @@
 
 import { type JSX, useEffect, useState } from 'react';
 
-import { THEME_KEY } from '~/shared/config/theme/constants';
-import { ThemeContext } from '~/shared/model/providers/context';
-import { type Theme, THEME_MODE, type ThemeProviderProps } from '~/shared/model/providers/types';
+import { THEME_KEY } from '@/shared/config/theme/constants';
+import { ThemeContext } from '@/shared/model/providers/context';
+import { type Theme, THEME_MODE, type ThemeProviderProps } from '@/shared/model/providers/types';
 
 export const ThemeProvider = ({ children, defaultTheme }: ThemeProviderProps): JSX.Element => {
   const [theme, setUserTheme] = useState<Theme>(defaultTheme);

@@ -2,11 +2,11 @@ import { fireEvent, render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
-import { scrollToSection } from '~/shared/lib/utils/scrollToSection';
+import { scrollToSection } from '@/shared/lib/utils/scrollToSection';
 
 import { RouterLink } from './RouterLink';
 
-vi.mock('~/shared/lib/utils/scrollToSection', () => ({
+vi.mock('@/shared/lib/utils/scrollToSection', () => ({
   scrollToSection: vi.fn(),
 }));
 

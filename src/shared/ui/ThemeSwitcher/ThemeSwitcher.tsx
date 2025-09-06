@@ -4,9 +4,9 @@ import { type JSX } from 'react';
 
 import { Monitor, Moon, Sun } from 'lucide-react';
 
-import { useTheme } from '~/shared/lib/hooks/useTheme';
-import { cn } from '~/shared/lib/utils/cn';
-import { THEME_MODE } from '~/shared/model/providers/types';
+import { useTheme } from '@/shared/lib/hooks/useTheme';
+import { cn } from '@/shared/lib/utils/cn';
+import { THEME_MODE } from '@/shared/model/providers/types';
 
 export const ThemeSwitcher = (): JSX.Element => {
   const { theme, setTheme } = useTheme();

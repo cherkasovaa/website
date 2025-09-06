@@ -1,7 +1,7 @@
 import type { JSX } from 'react';
 
-import { cn } from '~/shared/lib/utils/cn';
-import type { ClickableProps } from '~/shared/model/interfaces';
+import { cn } from '@/shared/lib/utils/cn';
+import type { ClickableProps } from '@/shared/model/interfaces';
 
 interface BurgerMenuProps extends ClickableProps {
   active: boolean;

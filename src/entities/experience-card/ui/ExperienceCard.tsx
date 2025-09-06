@@ -2,7 +2,7 @@ import { type JSX } from 'react';
 
 import { Link, SquareArrowOutUpRight } from 'lucide-react';
 
-import { Heading, TechStack } from '~/shared/ui';
+import { Heading, TechStack } from '@/shared/ui';
 
 import type { ExperienceCardProps } from '../model/types';
 

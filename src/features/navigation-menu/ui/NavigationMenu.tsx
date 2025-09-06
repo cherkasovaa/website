@@ -1,6 +1,6 @@
 import type { JSX } from 'react';
 
-import { RouterLink } from '~/shared/ui';
+import { RouterLink } from '@/shared/ui';
 
 import { menuItems } from '../model/constants';
 

@@ -1,4 +1,4 @@
-import type { Skill } from '~/shared/model/skill.types';
+import type { Skill } from '@/shared/model/skill.types';
 
 export const softSkills: Skill[] = [
   'I know how to work in a team, I have experience in <span>communication with managers and other developers</span>, and I value <span>team collaboration</span>',

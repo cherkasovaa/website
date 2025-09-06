@@ -1,6 +1,6 @@
 import type { JSX } from 'react';
 
-import type { Technology } from '~/shared/model/technologies';
+import type { Technology } from '@/shared/model/technologies';
 
 interface TechStackProps {
   technologies: Technology[];

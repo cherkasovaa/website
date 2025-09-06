@@ -1,8 +1,8 @@
 import { type JSX, useMemo } from 'react';
 
-import { APP_PATHS } from '~/shared/config/router/paths';
-import { formatStringWithSplit } from '~/shared/lib/utils/formatStringWithSplit';
-import { Heading, Section } from '~/shared/ui';
+import { APP_PATHS } from '@/shared/config/router/paths';
+import { formatStringWithSplit } from '@/shared/lib/utils/formatStringWithSplit';
+import { Heading, Section } from '@/shared/ui';
 
 import myPhoto from '../assets/my-photo.jpg';
 import { ABOUT_TEXT, SECTION_TITLE } from '../model/constants';

@@ -1,6 +1,6 @@
 import type { JSX } from 'react';
 
-import { cn } from '~/shared/lib/utils/cn';
+import { cn } from '@/shared/lib/utils/cn';
 
 import { levelClasses, tagMap } from './model/constants';
 
