@@ -1,9 +1,9 @@
 import type { JSX } from 'react';
 
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
-import { scrollToSection } from '~/shared/lib/utils/scrollToSection';
-import type { LinkProps } from '~/shared/model/interfaces';
+import { scrollToSection } from '@/shared/lib/utils/scrollToSection';
+import type { LinkProps } from '@/shared/model/interfaces';
 
 export const RouterLink = ({ path, content, handleClick, isAnchor = false, className }: LinkProps): JSX.Element => {
   const to = isAnchor ? `#${path}` : path;
@@ -19,7 +19,7 @@ export const RouterLink = ({ path, content, handleClick, isAnchor = false, class
   };
 
   return (
-    <Link to={to} onClick={(e) => handleLinkClick(e)} className={className}>
+    <Link href={to} onClick={(e) => handleLinkClick(e)} className={className}>
       {content}
     </Link>
   );
