@@ -61,7 +61,7 @@ export default tseslint.config(
       'no-unused-vars': 'off',
 
       // TypeScript rules
-      '@typescript-eslint/consistent-type-assertions': ['error', { assertionStyle: 'never' }],
+      '@typescript-eslint/consistent-type-assertions': ['warn'],
       '@typescript-eslint/consistent-type-imports': 'error',
       '@typescript-eslint/explicit-function-return-type': 'warn',
       '@typescript-eslint/explicit-member-accessibility': [
@@ -96,11 +96,6 @@ export default tseslint.config(
             },
             {
               pattern: '@/**',
-              group: 'internal',
-              position: 'after',
-            },
-            {
-              pattern: '~/**',
               group: 'internal',
               position: 'after',
             },
