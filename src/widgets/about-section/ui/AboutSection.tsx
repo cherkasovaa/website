@@ -1,5 +1,7 @@
 import { type JSX, useMemo } from 'react';
 
+import Image from 'next/image';
+
 import { APP_PATHS } from '@/shared/config/router/paths';
 import { formatStringWithSplit } from '@/shared/lib/utils/formatStringWithSplit';
 import { Heading, Section } from '@/shared/ui';
@@ -16,7 +18,7 @@ export const AboutSection = (): JSX.Element => {
 
       <div className="flex flex-col gap-10 lg:flex-row">
         <div className="overflow-hidden rounded-lg lg:w-1/3">
-          <img src={myPhoto} alt="Alina's photo" className="h-full w-full object-cover" />
+          <Image src={myPhoto} alt="Alina's photo" className="h-full w-full object-cover" />
         </div>
 
         <div className="lg:w-2/3">

@@ -2,7 +2,8 @@ import { type JSX } from 'react';
 
 import { Github, SquareArrowOutUpRight } from 'lucide-react';
 
-import { Heading, Image, TechStack } from '~/shared/ui';
+import { Heading, TechStack } from '@/shared/ui';
+import { ImageComponent } from '@/shared/ui/Image/ImageComponent';
 
 import { IMAGE_BASE_URL, PLACEHOLDER_URL } from '../model/constants';
 
@@ -48,7 +49,7 @@ export const ProjectCard = ({ project }: ProjectCardProps): JSX.Element => {
       </div>
 
       <div className="rounded-large w-full md:w-1/2">
-        <Image
+        <ImageComponent
           alt={`${project.name} screen`}
           src={imageUrl}
           fallbackSrc={PLACEHOLDER_URL}
