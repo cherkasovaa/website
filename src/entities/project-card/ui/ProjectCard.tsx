@@ -31,7 +31,7 @@ export const ProjectCard = ({ project }: ProjectCardProps): JSX.Element => {
         </a>
         <p className="mb-6">{project.description}</p>
 
-        <div className="text-accent mb-4 flex flex-wrap items-center gap-2">
+        <div className="mb-4">
           <TechStack technologies={project.technologies} />
         </div>
 

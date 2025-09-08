@@ -45,9 +45,7 @@ export const ProjectTableRow = ({ project }: ProjectTableRowProps): JSX.Element 
 
       {/* Technologies */}
       <td className="hidden py-4 pr-4 align-top md:table-cell">
-        <ul className="text-accent flex flex-wrap items-center gap-2">
-          <TechStack technologies={project.technologies} />
-        </ul>
+        <TechStack technologies={project.technologies} />
       </td>
 
       {/* Deploy link  */}

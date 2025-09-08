@@ -8,12 +8,12 @@ interface TechStackProps {
 
 export const TechStack = ({ technologies }: TechStackProps): JSX.Element => {
   return (
-    <>
+    <ul className="text-accent flex flex-wrap items-center gap-2">
       {technologies.map((tech) => (
-        <span key={tech} className="bg-accent/10 rounded-full px-3 py-1 text-sm">
+        <li key={tech} className="bg-accent/10 rounded-full px-3 py-1 text-sm">
           {tech}
-        </span>
+        </li>
       ))}
-    </>
+    </ul>
   );
 };

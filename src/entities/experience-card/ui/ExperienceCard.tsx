@@ -20,27 +20,29 @@ export const ExperienceCard = ({ experience }: ExperienceCardProps): JSX.Element
         {startPeriod} - {endPeriod}
       </div>
 
-      <div className="flex flex-col sm:col-span-6 md:mb-0">
-        {experience.companyUrl ? (
-          <a
-            href={experience.companyUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group mb-2.5 flex items-baseline gap-1.5"
-          >
-            <Heading level={3}>{title}</Heading>
+      <ul className="flex flex-col sm:col-span-6 md:mb-0">
+        <li>
+          {experience.companyUrl ? (
+            <a
+              href={experience.companyUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group mb-2.5 flex items-baseline gap-1.5"
+            >
+              <Heading level={3}>{title}</Heading>
 
-            <SquareArrowOutUpRight
-              strokeWidth={1}
-              size={12}
-              className="transition-all duration-300 group-hover:-translate-y-2"
-            />
-          </a>
-        ) : (
-          <Heading level={3} className="text-secondary mb-2.5">
-            {title}
-          </Heading>
-        )}
+              <SquareArrowOutUpRight
+                strokeWidth={1}
+                size={12}
+                className="transition-all duration-300 group-hover:-translate-y-2"
+              />
+            </a>
+          ) : (
+            <Heading level={3} className="text-secondary mb-2.5">
+              {title}
+            </Heading>
+          )}
+        </li>
 
         <p className="mb-6">{experience.description}</p>
 
@@ -65,7 +67,7 @@ export const ExperienceCard = ({ experience }: ExperienceCardProps): JSX.Element
         <div className="text-accent mb-4 flex flex-wrap items-center gap-2">
           <TechStack technologies={experience.technologies} />
         </div>
-      </div>
+      </ul>
     </div>
   );
 };
