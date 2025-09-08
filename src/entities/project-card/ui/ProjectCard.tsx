@@ -3,7 +3,7 @@ import { type JSX } from 'react';
 import { Github, SquareArrowOutUpRight } from 'lucide-react';
 
 import { Heading, TechStack } from '@/shared/ui';
-import { ImageComponent } from '@/shared/ui/image-component/ImageComponent';
+import { ImageComponent } from '@/shared/ui/ImageComponent/ImageComponent';
 
 import { IMAGE_BASE_URL, PLACEHOLDER_URL } from '../model/constants';
 
