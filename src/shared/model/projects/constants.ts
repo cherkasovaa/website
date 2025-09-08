@@ -22,7 +22,7 @@ export const projects: Project[] = [
   },
   {
     id: 'github-search',
-    name: 'Pokédex | Pokémon Search App',
+    name: 'Github Search App',
     description: 'An application for searching GitHub repositories.',
     type: PROJECT_TYPES.SPA,
     date: '2025-07-23',
@@ -129,19 +129,12 @@ export const projects: Project[] = [
     id: 'portfolio-website-v1',
     name: 'Portfolio',
     description:
-      'A modern single-page application (SPA) created with a love for clean code, user experience, and up-to-date technologies.',
-    type: PROJECT_TYPES.SPA,
+      'A fast and modern server-rendered web application created with a love for clean code, user experience, and optimal performance.',
+    type: PROJECT_TYPES.WEBSITE,
     date: '2025-06-01',
-    technologies: [
-      TECHNOLOGIES.REACT,
-      TECHNOLOGIES.TS,
-      TECHNOLOGIES.TAILWIND,
-      TECHNOLOGIES.REACT_ROUTER,
-      TECHNOLOGIES.VITE,
-      TECHNOLOGIES.VERCEL,
-    ],
+    technologies: [TECHNOLOGIES.NEXT, TECHNOLOGIES.TS, TECHNOLOGIES.TAILWIND, TECHNOLOGIES.VERCEL],
     githubUrl: 'https://github.com/cherkasovaa/website',
-    liveUrl: 'https://cherkasovaa.netlify.app/',
+    liveUrl: 'https://cherkasovaa.vercel.app/',
     imageUrl: 'portfolio-website-2025.png',
   },
   {

@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 
-import type { ListProps } from '~/shared/model/list.types';
+import type { ListProps } from '@/shared/model/list.types';
 
 export const useLimitedList = <T>(list: T[], options: ListProps = {}): T[] => {
   const { limit = 3, showAll = false } = options;

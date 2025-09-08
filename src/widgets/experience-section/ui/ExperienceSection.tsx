@@ -1,8 +1,8 @@
 import { type JSX } from 'react';
 
-import { ExperienceList } from '~/features/experience-list';
-import { APP_PATHS } from '~/shared/config/router/paths';
-import { Heading, Section } from '~/shared/ui';
+import { ExperienceList } from '@/features/experience-list';
+import { APP_PATHS } from '@/shared/config/router/paths';
+import { Heading, Section } from '@/shared/ui';
 
 export const ExperienceSection = (): JSX.Element => {
   const SECTION_TITLE = 'Experience';

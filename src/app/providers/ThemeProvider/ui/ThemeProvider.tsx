@@ -1,38 +1,39 @@
-import { type JSX, useCallback, useEffect, useState } from 'react';
+'use client';
 
-import { THEME_KEY } from '~/shared/config/theme/constants';
-import { getInitialTheme } from '~/shared/lib/utils/getInitialTheme';
-import { getSystemTheme } from '~/shared/lib/utils/getSystemTheme';
-import { ThemeContext } from '~/shared/model/providers/context';
-import { type Theme, THEME_MODE, type ThemeProviderProps } from '~/shared/model/providers/types';
+import { type JSX, useEffect, useState } from 'react';
 
-export const ThemeProvider = ({ children }: ThemeProviderProps): JSX.Element => {
-  const [theme, setUserTheme] = useState<Theme>(getInitialTheme);
-  const [systemTheme, setSystemTheme] = useState<Theme>(getSystemTheme);
+import { THEME_KEY } from '@/shared/config/theme/constants';
+import { ThemeContext } from '@/shared/model/providers/context';
+import { type Theme, THEME_MODE, type ThemeProviderProps } from '@/shared/model/providers/types';
 
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-
-    const handleChange = (e: MediaQueryListEvent): void => {
-      setSystemTheme(e.matches ? THEME_MODE.DARK : THEME_MODE.LIGHT);
-    };
-
-    mediaQuery.addEventListener('change', handleChange);
-
-    return (): void => mediaQuery.removeEventListener('change', handleChange);
-  }, []);
+export const ThemeProvider = ({ children, defaultTheme }: ThemeProviderProps): JSX.Element => {
+  const [theme, setUserTheme] = useState<Theme>(defaultTheme);
 
   useEffect(() => {
     const root = window.document.documentElement;
     root.classList.remove(THEME_MODE.DARK, THEME_MODE.LIGHT);
-    const appliedTheme = theme === THEME_MODE.SYSTEM ? systemTheme : theme;
-    root.classList.add(appliedTheme);
-  }, [theme, systemTheme]);
 
-  const setTheme = useCallback((newTheme: Theme): void => {
-    localStorage.setItem(THEME_KEY, newTheme);
-    setUserTheme(newTheme);
-  }, []);
+    document.cookie = `${THEME_KEY}=${theme};path=/;max-age=31536000`;
 
-  return <ThemeContext.Provider value={{ theme, setTheme }}>{children}</ThemeContext.Provider>;
+    if (theme === THEME_MODE.SYSTEM) {
+      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches
+        ? THEME_MODE.DARK
+        : THEME_MODE.LIGHT;
+
+      root.classList.add(systemTheme);
+
+      return;
+    }
+
+    root.classList.add(theme);
+  }, [theme]);
+
+  const value = {
+    theme,
+    setTheme: (newTheme: Theme): void => {
+      setUserTheme(newTheme);
+    },
+  };
+
+  return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;
 };

@@ -1,7 +1,7 @@
 import { memo } from 'react';
 
-import { cn } from '~/shared/lib/utils/cn';
-import { Heading, SkillCard } from '~/shared/ui';
+import { cn } from '@/shared/lib/utils/cn';
+import { Heading, SkillCard } from '@/shared/ui';
 
 import type { SkillListProps } from '../model/types';
 

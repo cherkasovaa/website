@@ -10,6 +10,7 @@ export type Theme = (typeof THEME_MODE)[keyof typeof THEME_MODE];
 
 export interface ThemeProviderProps {
   children: ReactNode;
+  defaultTheme: Theme;
 }
 
 export interface ThemeContextType {

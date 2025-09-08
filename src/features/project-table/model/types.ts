@@ -1,4 +1,4 @@
-import type { Project } from '~/shared/model/projects/types';
+import type { Project } from '@/shared/model/projects/types';
 
 export interface ProjectTableProps {
   projects: Project[];

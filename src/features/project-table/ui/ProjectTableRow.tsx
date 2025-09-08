@@ -1,11 +1,11 @@
 import { type JSX } from 'react';
 
 import { SquareArrowOutUpRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
-import { formatUrl } from '~/shared/lib/utils/formatUrl';
-import { PROJECT_TYPES } from '~/shared/model/projects/types';
-import { TechStack } from '~/shared/ui';
+import { formatUrl } from '@/shared/lib/utils/formatUrl';
+import { PROJECT_TYPES } from '@/shared/model/projects/types';
+import { TechStack } from '@/shared/ui';
 
 import type { ProjectTableRowProps } from '../model/types';
 
@@ -20,7 +20,7 @@ export const ProjectTableRow = ({ project }: ProjectTableRowProps): JSX.Element 
       <td className="text-primary py-4 pr-4 align-top leading-snug font-semibold sm:whitespace-nowrap">
         <div className="block sm:hidden">
           <Link
-            to={project.liveUrl}
+            href={project.liveUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="group mb-2.5 flex items-baseline gap-1.5"
@@ -45,15 +45,13 @@ export const ProjectTableRow = ({ project }: ProjectTableRowProps): JSX.Element 
 
       {/* Technologies */}
       <td className="hidden py-4 pr-4 align-top md:table-cell">
-        <ul className="text-accent flex flex-wrap items-center gap-2">
-          <TechStack technologies={project.technologies} />
-        </ul>
+        <TechStack technologies={project.technologies} />
       </td>
 
       {/* Deploy link  */}
       <td className="hidden py-4 align-top sm:table-cell sm:whitespace-nowrap">
         <Link
-          to={project.liveUrl}
+          href={project.liveUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="group mb-2.5 flex items-baseline gap-1.5"

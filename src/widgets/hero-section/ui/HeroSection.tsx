@@ -1,11 +1,13 @@
+'use client';
+
 import type { JSX } from 'react';
 
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 
-import { Terminal } from '~/features/terminal';
-import { APP_PATHS } from '~/shared/config/router/paths';
-import { useFadeInUpAnimation } from '~/shared/lib/hooks/useFadeInUpAnimation';
-import { RouterLink, Section } from '~/shared/ui';
+import { Terminal } from '@/features/terminal';
+import { APP_PATHS } from '@/shared/config/router/paths';
+import { useFadeInUpAnimation } from '@/shared/lib/hooks/useFadeInUpAnimation';
+import { RouterLink, Section } from '@/shared/ui';
 
 export const HeroSection = (): JSX.Element => {
   const headingClasses = 'text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold';

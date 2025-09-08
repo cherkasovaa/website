@@ -1,6 +1,6 @@
 import { type JSX, type ReactNode } from 'react';
 
-import { cn } from '~/shared/lib/utils/cn';
+import { cn } from '@/shared/lib/utils/cn';
 
 interface SectionProps {
   id?: string;

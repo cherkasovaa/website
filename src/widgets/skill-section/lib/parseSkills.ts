@@ -1,4 +1,4 @@
-import type { SkillGroup } from '~/shared/model/skill.types';
+import type { SkillGroup } from '@/shared/model/skill.types';
 
 import { isHardSkill } from '../model/typeGuards';
 

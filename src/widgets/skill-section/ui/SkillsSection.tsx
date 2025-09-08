@@ -1,8 +1,8 @@
 import { type JSX } from 'react';
 
-import { SkillList } from '~/entities/skill-list';
-import { APP_PATHS } from '~/shared/config/router/paths';
-import { Heading, Section } from '~/shared/ui';
+import { SkillList } from '@/entities/skill-list';
+import { APP_PATHS } from '@/shared/config/router/paths';
+import { Heading, Section } from '@/shared/ui';
 
 import { hardSkills } from '../model/hardSkills.constants';
 import { softSkills } from '../model/softSkills.constants';
