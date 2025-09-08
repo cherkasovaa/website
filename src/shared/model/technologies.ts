@@ -9,6 +9,7 @@ export const TECHNOLOGIES = {
   PHP: 'PHP',
   JQUERY: 'jQuery',
   REACT: 'React',
+  NEXT: 'Next.js',
   REACT_ROUTER: 'React Router',
   TANSTACK: 'Tanstack',
   ZUSTAND: 'Zustand',

@@ -1,6 +1,6 @@
 import { memo } from 'react';
 
-import { Heading } from '~/shared/ui';
+import { Heading } from '@/shared/ui';
 
 export const HardSkillCard = memo(function HardSkillCard({ title, skills }: { title: string; skills: string[] }) {
   const middleIndex = skills.length > 3 ? Math.floor(skills.length / 2) : skills.length;

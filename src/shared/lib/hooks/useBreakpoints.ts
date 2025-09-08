@@ -4,21 +4,25 @@ interface MediaQueries {
   isMobile: boolean;
   isSmallestDevice: boolean;
 }
-export const useBreakpoints = (): MediaQueries => {
-  const getBreakpoints = (): MediaQueries => ({
-    isMobile: window.matchMedia('(max-width: 768px)').matches,
-    isSmallestDevice: window.matchMedia('(max-width: 425px)').matches,
-  });
 
-  const [breakpoints, setBreakpoints] = useState<MediaQueries>(getBreakpoints);
+const defaultValue: MediaQueries = {
+  isMobile: false,
+  isSmallestDevice: false,
+};
+
+const getBreakpoints = (): MediaQueries => ({
+  isMobile: window.matchMedia('(max-width: 768px)').matches,
+  isSmallestDevice: window.matchMedia('(max-width: 425px)').matches,
+});
+
+export const useBreakpoints = (): MediaQueries => {
+  const [breakpoints, setBreakpoints] = useState<MediaQueries>(defaultValue);
 
   useEffect(() => {
     const onResize = (): void => {
-      setBreakpoints({
-        isMobile: window.matchMedia('(max-width: 768px)').matches,
-        isSmallestDevice: window.matchMedia('(max-width: 425px)').matches,
-      });
+      setBreakpoints(getBreakpoints());
     };
+
     onResize();
 
     window.addEventListener('resize', onResize);

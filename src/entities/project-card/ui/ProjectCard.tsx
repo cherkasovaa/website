@@ -2,7 +2,8 @@ import { type JSX } from 'react';
 
 import { Github, SquareArrowOutUpRight } from 'lucide-react';
 
-import { Heading, Image, TechStack } from '~/shared/ui';
+import { Heading, TechStack } from '@/shared/ui';
+import { ImageComponent } from '@/shared/ui/image-component/ImageComponent';
 
 import { IMAGE_BASE_URL, PLACEHOLDER_URL } from '../model/constants';
 
@@ -30,7 +31,7 @@ export const ProjectCard = ({ project }: ProjectCardProps): JSX.Element => {
         </a>
         <p className="mb-6">{project.description}</p>
 
-        <div className="text-accent mb-4 flex flex-wrap items-center gap-2">
+        <div className="mb-4">
           <TechStack technologies={project.technologies} />
         </div>
 
@@ -48,7 +49,7 @@ export const ProjectCard = ({ project }: ProjectCardProps): JSX.Element => {
       </div>
 
       <div className="rounded-large w-full md:w-1/2">
-        <Image
+        <ImageComponent
           alt={`${project.name} screen`}
           src={imageUrl}
           fallbackSrc={PLACEHOLDER_URL}

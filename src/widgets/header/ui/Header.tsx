@@ -1,11 +1,13 @@
+'use client';
+
 import { type JSX, useEffect, useState } from 'react';
 
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
-import { NavigationMenu } from '~/features/navigation-menu';
-import { APP_PATHS } from '~/shared/config/router/paths';
-import { useBreakpoints } from '~/shared/lib/hooks/useBreakpoints';
-import { BurgerMenu, Logo, ThemeSwitcher } from '~/shared/ui';
+import { NavigationMenu } from '@/features/navigation-menu';
+import { APP_PATHS } from '@/shared/config/router/paths';
+import { useBreakpoints } from '@/shared/lib/hooks/useBreakpoints';
+import { BurgerMenu, Logo, ThemeSwitcher } from '@/shared/ui';
 
 export const Header = (): JSX.Element => {
   const { isMobile, isSmallestDevice } = useBreakpoints();
@@ -37,7 +39,7 @@ export const Header = (): JSX.Element => {
         </div>
 
         <Link
-          to={APP_PATHS.RESUME}
+          href={APP_PATHS.RESUME}
           target="_blank"
           className="border-accent hover:text-background bg-accent/10 hover:bg-accent text-accent text-md inline-block rounded-full px-5 py-1 text-center transition-colors"
           aria-label="resume (opens in a new tab)"

@@ -7,13 +7,28 @@ This is my personal portfolio website — a modern single-page application (SPA)
 
 This project reflects my professional approach and commitment to continuous growth. Here you'll find information about me, my skills, and completed projects.
 
+## Project Architecture
+``` text
+├── app/                  # Next.js App Router (routing)
+│   ├── layout.tsx        # Imports from src/app/providers
+│   ├── page.tsx          # Imports from src/pages/home
+│   ├── portfolio/        # Imports from src/pages/portfolio
+├── pages/                # Stub Next.js pages folder
+│   ├── README.md         # Description of why this folder exists
+├── src/                  # FSD structure
+│   ├── app/              # FSD app layer 
+│   ├── entities/  
+│   ├── features/  
+│   ├── pages/            # FSD pages layer
+│   ├── shared/
+│   ├── widgets/
+```
+
 ## Technology Stack
 ### Core technologies
-- React 18
+- Next.js
 - TypeScript
-- Vite
 - Tailwind CSS
-- React Helmet Async
 
 ### Code Quality Tools
 - ESLint
@@ -24,8 +39,6 @@ This project reflects my professional approach and commitment to continuous grow
 
 ### Architecture:
 - Feature-Sliced Design (FSD) for project structure
-- React Router for routing
-- React Context for state management
 
 ### Testing:
 - Vitest + React Testing Library
@@ -76,9 +89,9 @@ npm install
 
 | Script               |  Description                                              |
 |:---------------------|:----------------------------------------------------------|
-| npm run dev          | Runs the app in development mode using Vite               |
-| npm run build        | Builds the app for production using TypeScript and Vite   |
-| npm run preview      | Serves the production build locally                       |
+| npm run dev          | Runs the app in development mode using Next.js            |
+| npm run build        | Builds the app for production                             |
+| npm run start        | Serves the production build locally                       |
 | npm run lint         | Runs ESLint to analyze code for issues                    |
 | npm run lint:fix     | Automatically fixes code issues                           |
 | npm run format       | Automatically fixes formatting issues                     |

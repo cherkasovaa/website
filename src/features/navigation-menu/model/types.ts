@@ -1,3 +1,3 @@
-import type { ClickableProps } from '~/shared/model/interfaces';
+import type { ClickableProps } from '@/shared/model/interfaces';
 
 export type NavigationMenuProps = Partial<ClickableProps>;
