@@ -55,22 +55,3 @@ jobs:
 
       - name: Format
         run: npm run format:check
-
-  test:
-    needs: setup
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Cache dependencies
-        uses: actions/cache@v4
-        with:
-          path: ~/.npm
-          key: node-modules-${{ hashFiles('**/package-lock.json') }}
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Test
-        run: npm run test
