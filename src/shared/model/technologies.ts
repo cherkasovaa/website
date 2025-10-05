@@ -14,6 +14,7 @@ export const TECHNOLOGIES = {
   TANSTACK: 'Tanstack',
   ZUSTAND: 'Zustand',
   RTK: 'Redux Toolkit (RTK)',
+  FIREBASE: 'Firebase',
   BOOTSTRAP_4: 'Bootstrap 4',
   TAILWIND: 'Tailwind CSS',
   MATERIAL_UI: 'Material UI',
