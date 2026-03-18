@@ -28,7 +28,7 @@ export const Footer = (): JSX.Element => {
             <a href="mailto:alina.ch1202@yandex.com" className="hover:text-accent transition-colors">
               alina.ch1202@yandex.com
             </a>
-            <p>© Alina Cherkasova, 2025</p>
+            <p>© Alina Cherkasova, {new Date().getFullYear()}</p>
           </div>
         </div>
       </div>
