@@ -1,3 +1,4 @@
+import { E_MAIL, GITHUB, TELEGRAM } from '@/shared/config/contacts';
 import type { JSX } from 'react';
 
 import { FaGithub, FaTelegram } from 'react-icons/fa';
@@ -10,14 +11,14 @@ export const Footer = (): JSX.Element => {
           <div className="flex flex-col items-center gap-4 md:items-start">
             <div className="flex space-x-4">
               <p className="text-accent">Contact me →</p>
-              <a href="https://t.me/cherkasova_aa" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+              <a href={TELEGRAM} target="_blank" rel="noopener noreferrer" aria-label="Telegram">
                 <FaTelegram className="hover:text-accent h-6 w-6 transition-colors" />
               </a>
             </div>
           </div>
 
           <div className="flex flex-col items-center gap-4">
-            <a href="https://github.com/cherkasovaa" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <a href={GITHUB} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <FaGithub className="hover:text-accent h-6 w-6 transition-colors" />
             </a>
 
@@ -25,8 +26,8 @@ export const Footer = (): JSX.Element => {
           </div>
 
           <div className="flex flex-col items-center gap-4 md:items-end">
-            <a href="mailto:alina.ch1202@yandex.com" className="hover:text-accent transition-colors">
-              alina.ch1202@yandex.com
+            <a href={`mailto:${E_MAIL}`} className="hover:text-accent transition-colors">
+              {E_MAIL}
             </a>
             <p>© Alina Cherkasova, {new Date().getFullYear()}</p>
           </div>
