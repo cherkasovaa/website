@@ -32,8 +32,8 @@
     "@testing-library/react": "^16.3.0",
     "@types/jsdom": "^21.1.7",
     "@types/node": "^22.15.28",
-    "@types/react": "^19.1.6",
-    "@types/react-dom": "^19.1.5",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
     "@vitejs/plugin-react": "^4.5.0",
     "eslint": "^9.27.0",
     "eslint-import-resolver-typescript": "^4.4.2",
@@ -58,10 +58,14 @@
     "@tailwindcss/postcss": "^4.1.13",
     "framer-motion": "^12.23.12",
     "lucide-react": "^0.523.0",
-    "next": "15.5.9",
+    "next": "16.1.7",
     "postcss": "^8.5.6",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
     "react-icons": "^5.5.0"
+  },
+  "overrides": {
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3"
   }
 }
