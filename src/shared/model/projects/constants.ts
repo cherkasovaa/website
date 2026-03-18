@@ -4,6 +4,17 @@ import { type Project, PROJECT_TYPES } from './types';
 
 export const projects: Project[] = [
   {
+    id: 'rest-client-app',
+    name: 'Rest Client App',
+    description: 'A lightweight tool for interacting with RESTful APIs.',
+    type: PROJECT_TYPES.SPA,
+    date: '2025-09-22',
+    technologies: [TECHNOLOGIES.NEXT, TECHNOLOGIES.TS, TECHNOLOGIES.MATERIAL_UI, TECHNOLOGIES.FIREBASE],
+    githubUrl: 'https://github.com/cherkasovaa/rest-client-app',
+    liveUrl: 'https://lightweight-rest-client-app.vercel.app/',
+    imageUrl: 'rest-client-app.png',
+  },
+  {
     id: 'pokedex-pokemon-search',
     name: 'Pokédex | Pokémon Search App',
     description: 'An application for searching and viewing Pokémon.',
